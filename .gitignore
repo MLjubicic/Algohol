@@ -1,0 +1,6 @@
+.project
+.classpath
+daoProperties
+target/*
+bin/*
+*.class
