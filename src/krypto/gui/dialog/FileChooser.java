@@ -16,12 +16,11 @@ public class FileChooser {
 	private File directory;
 
 	/**
-	 * Method which launches a configured file chooser which let you select the 
-	 * path of the EQ2 log files.
+	 * 
 	 */
 	public void setEQ2LogFileDirectory() {
 		JFileChooser fc =  new JFileChooser();
-		fc.setDialogTitle("Tingles Log Parser - Choose EQ2 Log File Directory");
+		fc.setDialogTitle("Software Projekt 2 - Kryptologie");
 		fc.setApproveButtonText("Choose Directory");
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		fc.setFileFilter(new FileNameExtensionFilter("Path", ".*"));
