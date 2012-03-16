@@ -23,8 +23,10 @@ public class FrequencyAnalyzer {
 				int anz = amountMap.get(ch);
 				anz++;
 				amountMap.put(ch, anz);
+//				System.out.println("Zeichen: " + ch + " / Anzahl: " + anz);
 			} else {
 				amountMap.put(ch, 1);
+//				System.out.println("Zeichen: " + ch + " / Anzahl: 1");
 			}
 		}
 	}

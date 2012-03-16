@@ -9,6 +9,8 @@
 15. Mrz. 2012 -MW- Hauptstruktur erstellt
               -MW- Klasse FileChooser erstellt
               -MW- Klasse ExceptionDisplay erstellt
-16. Mrz. 2012 -MW- Testklasse TestExceptionDisplay erstellt
+16. Mrz. 2012 -MW- TestKlasse TestExceptionDisplay erstellt
               -MW- Klasse FrequencyAnalyzer erstellt
               -MW- Klasse LoadTextFile erstellt
+              -MW- TestKlasse TestLoadTextFile erstellt
+              -MW- TestKlasse TestFrequencyAnalyzer erstellt
