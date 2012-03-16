@@ -13,33 +13,33 @@ public class FileChooser {
 	 * @version 1.0
 	 */
 
-	private File directory;
+	private File file;
 
 	/**
 	 * 
 	 */
-	public void setEQ2LogFileDirectory() {
+	public void setTextFile() {
 		JFileChooser fc =  new JFileChooser();
 		fc.setDialogTitle("Software Projekt 2 - Kryptologie");
-		fc.setApproveButtonText("Choose Directory");
-		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		fc.setFileFilter(new FileNameExtensionFilter("Path", ".*"));
+		fc.setApproveButtonText("Choose Textfile");
+//		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+//		fc.setFileFilter(new FileNameExtensionFilter("Path", ".*"));
 
 		int returnVal = fc.showOpenDialog(new JFrame());
 
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
-			directory = fc.getSelectedFile();
+			file = fc.getSelectedFile();
 		}
 	}
 
 	/**
-	 * Method which returns the selected path
-	 * @return directory
+	 * Method which returns the selected file
+	 * @return file
 	 */
-	public File getDirectory() {
-		if (directory == null) {
-			new ExceptionDisplay("No path choosed.");
+	public File getFile() {
+		if (file == null) {
+			new ExceptionDisplay("No file choosed!");
 		}
-		return directory;
+		return file;
 	}
 }
