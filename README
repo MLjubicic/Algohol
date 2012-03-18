@@ -16,9 +16,12 @@
               -MW- TestKlasse TestFrequencyAnalyzer erstellt
 17. Mrz. 2012 -MW- FrequencyAnalyzer kann nun Zeichen zählen,
                    den prozentualen Anteil berechnen in 
-                   welchem die Zeichen Auftreten.
-18. Mrz. 2012 -MW- Klasse KryptoFrame erstellt.
-                   TestKlasse TestKryptoFrame erstellt.
-                   Klasse MainMenuBar erstellt, File- & Help
-                   Menu hinzugefügt. 
-                   Klasse VersionInformation erstellt.
+                   welchem die Zeichen Auftreten
+18. Mrz. 2012 -MW- Klasse KryptoFrame erstellt
+              -MW- TestKlasse TestKryptoFrame erstellt
+              -MW- Klasse MainMenuBar erstellt, File- & Help
+              -MW- Menu hinzugefügt 
+              -MW- Klasse VersionInformation erstellt
+              -MW- Klasse VersionListener erstellt
+              -MW- Klasse ExitListener erstellt
+              -MW- Klasse LoadListener erstellt
