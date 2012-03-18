@@ -1,10 +1,10 @@
-********************************************************
-*    Zuercher Hochschule angewandter Wissenschaften    *
-*                  Software Projekt 2                  *
-*                                                      *
-*            Miro Ljubicic & Mathias Weigert           *
-*                                                      *
-********************************************************
+**************************************************************
+*       Zuercher Hochschule angewandter Wissenschaften       *
+*                     Software Projekt 2                     *
+*                                                            *
+*               Miro Ljubicic & Mathias Weigert              *
+*                                                            *
+**************************************************************
 
 15. Mrz. 2012 -MW- Hauptstruktur erstellt
               -MW- Klasse FileChooser erstellt
@@ -14,3 +14,11 @@
               -MW- Klasse LoadTextFile erstellt
               -MW- TestKlasse TestLoadTextFile erstellt
               -MW- TestKlasse TestFrequencyAnalyzer erstellt
+17. Mrz. 2012 -MW- FrequencyAnalyzer kann nun Zeichen zählen,
+                   den prozentualen Anteil berechnen in 
+                   welchem die Zeichen Auftreten.
+18. Mrz. 2012 -MW- Klasse KryptoFrame erstellt.
+                   TestKlasse TestKryptoFrame erstellt.
+                   Klasse MainMenuBar erstellt, File- & Help
+                   Menu hinzugefügt. 
+                   Klasse VersionInformation erstellt.

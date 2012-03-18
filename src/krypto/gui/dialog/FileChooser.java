@@ -4,7 +4,6 @@ import java.io.File;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileChooser {
 
@@ -16,7 +15,9 @@ public class FileChooser {
 	private File file;
 
 	/**
-	 * 
+	 *  Method which opens a file chooser. 
+	 *  NEED: We should write a file filter for this method.
+	 *        Which shows only txt files.
 	 */
 	public void setTextFile() {
 		JFileChooser fc =  new JFileChooser();
