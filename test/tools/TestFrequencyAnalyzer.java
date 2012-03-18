@@ -1,5 +1,9 @@
-/**
- * 
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  +      Zuercher Hochschule angewandter Wissenschaften      +
+ *  +                    Software Projekt 2                    +
+ *  +                                                          +
+ *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
 package tools;
 

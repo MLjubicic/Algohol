@@ -1,11 +1,16 @@
-/**
- * 
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  +      Zuercher Hochschule angewandter Wissenschaften      +
+ *  +                    Software Projekt 2                    +
+ *  +                                                          +
+ *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
 package krypto.gui.menu;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JSeparator;
 
 import krypto.gui.action.ExitListener;
 import krypto.gui.action.LoadListener;
@@ -30,6 +35,9 @@ public class MainMenuBar {
 		loadItem.addActionListener(new LoadListener());
 		fileMenu.add(loadItem);
 
+		JSeparator sepFileMenu = new JSeparator();
+		fileMenu.add(sepFileMenu);
+		
 		JMenuItem exitItem = new JMenuItem("Exit");
 		exitItem.setMnemonic('x');
 		exitItem.addActionListener(new ExitListener());
