@@ -27,7 +27,6 @@ public class TestFrequencyAnalyzer {
 		File file = new File("D:\\Daten\\Dropbox\\Java Projekte\\EQ2 Logs\\Test_LOG.txt");
 		ltf.loadFile(file);
 		FrequencyAnalyzer fa = new FrequencyAnalyzer();
-		fa.calculateFrequency();
 		fa.countItems(ltf.getStr().toLowerCase());
 		fa.calculateFrequency();
 	}

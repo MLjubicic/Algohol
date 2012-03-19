@@ -8,9 +8,8 @@
 package krypto.tools;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
-
-import krypto.gui.dialog.ExceptionDisplay;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -20,17 +19,28 @@ public class FrequencyAnalyzer {
 
 	private Map<Character, Integer> amountMap;
 	private Map<Character, Double> frequencyMap;
-	
+	private String original;
+
+	/*
+	 * Method calculates the frequency out of an amount map and save the result in
+	 * a new HashMap (frequencyMap).
+	 */
 	public void calculateFrequency () {
 		frequencyMap = new HashMap<Character, Double>();
-		if (frequencyMap != null) {
-			System.out.println("OK");
-		} else {
-			new ExceptionDisplay("There not data which could be calculated.");
+		Double len = (double) original.length();
+		for (Iterator<Character> iter = amountMap.keySet().iterator(); iter.hasNext();) {
+			Character key = iter.next();
+			double percentage = (double) (amountMap.get(key) / len * 100);
+			frequencyMap.put(key, percentage);
 		}
 	}
 
+	/*
+	 * Method calculates out of a string a HashMap which stores as key the character
+	 * and as value the quantity of this character in the string.
+	 */
 	public void countItems (String str) {
+		original = str;
 		amountMap = new HashMap<Character, Integer>();
 		int length = str.length();
 		for (int i = 0; i < length; i++) {
@@ -39,15 +49,17 @@ public class FrequencyAnalyzer {
 				int anz = amountMap.get(ch);
 				anz++;
 				amountMap.put(ch, anz);
-//				System.out.println("Zeichen: " + ch + " / Anzahl: " + anz);
 			} else {
 				amountMap.put(ch, 1);
-//				System.out.println("Zeichen: " + ch + " / Anzahl: 1");
 			}
 		}
 	}
-	
+
 	public Map<Character, Integer> getAmountMap() {
 		return amountMap;
+	}
+	
+	public Map<Character, Double> getFrequencyMap() {
+		return frequencyMap;
 	}
 }
