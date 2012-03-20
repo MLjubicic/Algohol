@@ -5,7 +5,7 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.tools;
+package krypto.tools.decrypt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +20,10 @@ public class CaesarBruteForce {
 	private String plain;
 	private Map<Character, String> report;
 
+	/*
+	 * Method which try all 26 keys on the cipher text. The solution for each
+	 * key will be stored in a map (report).
+	 */
 	public CaesarBruteForce(String cipher) {
 		report = new HashMap<Character, String>();
 		this.cipher = cipher;

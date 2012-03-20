@@ -1,15 +1,19 @@
-/**
- * 
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  +      Zuercher Hochschule angewandter Wissenschaften      +
+ *  +                    Software Projekt 2                    +
+ *  +                                                          +
+ *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package tools;
+package tools.decrypt;
 
 import java.util.Map;
 
-import krypto.tools.CaesarBruteForce;
+import krypto.tools.decrypt.CaesarBruteForce;
 
 /**
- * @author MWeigert
- *
+ * @author Mathias Weigert & Miro Ljubicic
+ * @version 1.0
  */
 public class TestCaesarBruteForce {
 

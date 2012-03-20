@@ -5,7 +5,7 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.tools;
+package krypto.tools.decrypt;
 
 import java.util.HashMap;
 import java.util.Iterator;
