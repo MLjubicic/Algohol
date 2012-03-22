@@ -19,12 +19,14 @@ public class CaesarBruteForce {
 	private String cipher;
 	private String plain;
 	private Map<Character, String> report;
+	private Long time;
 
 	/*
 	 * Method which try all 26 keys on the cipher text. The solution for each
 	 * key will be stored in a map (report).
 	 */
 	public CaesarBruteForce(String cipher) {
+		time = -System.currentTimeMillis();
 		report = new HashMap<Character, String>();
 		this.cipher = cipher;
 		plain = new String();
@@ -46,6 +48,7 @@ public class CaesarBruteForce {
 			report.put(abc.charAt(i), plain);
 			plain = "";
 		}
+		time = time + System.currentTimeMillis();
 	}
 	
 	public String getCipher() {
@@ -54,5 +57,9 @@ public class CaesarBruteForce {
 	
 	public Map<Character, String> getReport() {
 		return report;
+	}
+	
+	public Long getTime() {
+		return time;
 	}
 }

@@ -24,6 +24,7 @@ public class TestCaesarBruteForce {
 		// TODO Auto-generated method stub
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String str = "VHqDP zqwJ yC AECFBuJJ LuHMqxHBEIJuD jqNy GKuH tKHsx RqOuHD";
+//		String str = "LOYINKXY LXOZF LOYINZ LXOYINK LOYINK";
 		CaesarBruteForce cb = new CaesarBruteForce(str.toUpperCase());
 		Map<Character, String> report = cb.getReport();
 		System.out.println("Cipher:       " + cb.getCipher());
@@ -32,6 +33,7 @@ public class TestCaesarBruteForce {
 		for (int i = 0; i < 26; i++) {
 			System.out.println("Key: " + abc.charAt(i) + " Plain: " + report.get(abc.charAt(i)));
 		}
+		System.out.println("Gebrauchte Zeit: " + cb.getTime() + " ms");
 	}
 
 }

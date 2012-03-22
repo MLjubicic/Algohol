@@ -29,3 +29,7 @@
               -MW- TestKlasse TestCaesarBruteForce erstellt
 20. Mrz. 2012 -MW- Klasse CaesarEncrypt erstellt
               -MW- TestKlasse TestCaesarEncrypt erstellt.
+22. Mrz. 2012 -MW- Minor Bug fixed in CaesarEncrypt.
+              -MW- Klasse CaesarPanel erstellt.
+              -MW- CaesarBruteForce misst die Zeit welche zum
+                   knacken benötigt wird.

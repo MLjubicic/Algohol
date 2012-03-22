@@ -7,6 +7,8 @@
  */
 package tools.encrypt;
 
+import krypto.tools.encrypt.CaesarEncrypt;
+
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
@@ -18,7 +20,7 @@ public class TestCaesarEncrypt {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		CaesarEncrypt ce = new CaesarEncrypt("Fischers Fritz fischt frische Fische", 'G');
 	}
 
 }

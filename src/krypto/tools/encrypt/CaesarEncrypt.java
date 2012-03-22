@@ -16,31 +16,35 @@ public class CaesarEncrypt {
 	private String cipher;
 	private String plain;
 	private Character key;
-	
+
 	public CaesarEncrypt(String plain, Character key) {
-		this.plain = plain;
+		this.plain = plain.toUpperCase();
 		this.key = key;
 		cipher = new String();
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		int dis = abc.indexOf(Character.toUpperCase(key));
 		for (int i = 0; i < plain.length(); i++) {
-			int pos = abc.indexOf(plain.charAt(i)) + dis;
+			if (this.plain.charAt(i) != ' ') {
+			int pos = abc.indexOf(this.plain.charAt(i)) + dis;
+			if (pos > 25) {
+				pos = pos -26;
+			}
 			Character c = abc.charAt(pos);
 			cipher = cipher + Character.toUpperCase(c);
+			} else {
+				cipher = cipher + ' ';
+			}
 		}
-		System.out.println("Plain: " + plain);
-		System.out.println("Key: " + key);
-		System.out.println("Cipher: "+ cipher);
 	}
-	
+
 	public String getCipher() {
 		return cipher;
 	}
-	
+
 	public Character getKey() {
 		return key;
 	}
-	
+
 	public String getPlain() {
 		return plain;
 	}
