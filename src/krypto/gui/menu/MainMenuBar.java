@@ -27,6 +27,7 @@ public class MainMenuBar {
 	public JMenuBar initMenuBar() {
 		menuBar = new JMenuBar();
 
+		// ************** File Menu **************
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.setMnemonic('F');
 
@@ -43,6 +44,16 @@ public class MainMenuBar {
 		exitItem.addActionListener(new ExitListener());
 		fileMenu.add(exitItem);
 
+		// ************** Crypto Menu **************
+		JMenu cryptoMenu = new JMenu("Crypto");
+		cryptoMenu.setMnemonic('C');
+		
+		JMenuItem caesarItem = new JMenuItem("Caesar Chiffre");
+		caesarItem.setMnemonic('C');
+		cryptoMenu.add(caesarItem);
+		
+		
+		// ************** Help Menu **************
 		JMenu helpMenu = new JMenu("Help");
 		helpMenu.setMnemonic('H');
 
@@ -53,6 +64,7 @@ public class MainMenuBar {
 		helpMenu.add(versionItem);
 
 		menuBar.add(fileMenu);
+		menuBar.add(cryptoMenu);
 		menuBar.add(helpMenu);
 		return menuBar;
 	}
