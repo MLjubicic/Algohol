@@ -33,3 +33,6 @@
               -MW- Klasse CaesarPanel erstellt.
               -MW- CaesarBruteForce misst die Zeit welche zum
                    knacken benötigt wird.
+23. Mrz. 2012 -MW- CaesarEncrypt verwendet nun einen schoeneren
+                   Algorithmus.
+              -MW- Klasse SkytaleEncrypt hinzugefügt.
