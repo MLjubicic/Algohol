@@ -7,6 +7,7 @@
  */
 package krypto.tools.encrypt;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import krypto.gui.dialog.ExceptionDisplay;
@@ -20,7 +21,7 @@ public class SkytaleEncrypt {
 	private String plain;
 	private String cipher;
 	private Integer key;
-	private Map<Integer, String> skytale;
+	private Map<Integer, String> skytale = new HashMap<Integer, String>();
 
 	public SkytaleEncrypt(String plain, Integer key) {
 		this.plain = plain.toLowerCase();
@@ -29,9 +30,10 @@ public class SkytaleEncrypt {
 			new ExceptionDisplay("Sorry der Schlüssel kann bei Skytale nicht " +
 			"größer sein, als der Reintext lang ist!");
 		} else {
-//			int s = GanzzahlDivision von plain.length/key (immer Aufrunden)
+			int s = plain.length()/key;
+			System.out.println("Buchstaben: " + plain.length() + " Spalten: " + 2 + "Zeilen: " + plain.length()/s);
 			for (int i = 1; i < (plain.length()/s); i++) {
-				skytale.put(i, plain.substring(i * key - key, i * key - 1));
+				skytale.put(i, plain.substring(i * key - key, i * key).toUpperCase());
 			}
 		}
 	}

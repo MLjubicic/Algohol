@@ -5,29 +5,24 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.panel;
+package tools.encrypt;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import krypto.tools.encrypt.SkytaleEncrypt;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarPanel {
+public class TestSkytaleEncrypt {
 
-	private JPanel cPanel;
-	
-	public CaesarPanel() {
-		cPanel = new JPanel();
-		cPanel.setLayout(null);
-		
-		JLabel plainLabel = new JLabel("Plaintext");
-		plainLabel.setBounds(10, 10, 50, 25);
-		cPanel.add(plainLabel);
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SkytaleEncrypt ste = new SkytaleEncrypt("Fischers Fritz fischt frische Fische", 5);
+		System.out.println("Plain:  " + ste.getPlain().toLowerCase());
+		System.out.println("Cipher :" + ste.getCipher());
 	}
-	
-	public JPanel getCaesarPanel() {
-		return cPanel;
-	}
+
 }

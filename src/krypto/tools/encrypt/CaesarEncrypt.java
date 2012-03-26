@@ -7,7 +7,6 @@
  */
 package krypto.tools.encrypt;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -29,7 +28,7 @@ public class CaesarEncrypt {
 			Character z = this.plain.charAt(i);
 			if (z != ' ') {
 				Integer x = abc.indexOf(z) + k;
-				z = abc.charAt(x.Mod(26));
+				z = abc.charAt(x%26);
 				cipher = cipher + z;
 //			int pos = abc.indexOf(this.plain.charAt(i)) + dis;
 //			if (pos > 25) {

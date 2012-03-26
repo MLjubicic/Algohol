@@ -8,6 +8,7 @@
 package gui;
 
 import krypto.gui.main.KryptoFrame;
+import krypto.gui.panel.CaesarPanel;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -22,6 +23,9 @@ public class TestKryptoFrame {
 		// TODO Auto-generated method stub
 		KryptoFrame kFrame = new KryptoFrame();
 		kFrame.initKryptoFrame();
+		// Test CaesarPanel
+		CaesarPanel cpanel = new CaesarPanel();
+		kFrame.setPanel(cpanel.getCaesarPanel());
 		kFrame.setVisibility(true);
 	}
 

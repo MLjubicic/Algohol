@@ -36,3 +36,5 @@
 23. Mrz. 2012 -MW- CaesarEncrypt verwendet nun einen schoeneren
                    Algorithmus.
               -MW- Klasse SkytaleEncrypt hinzugefügt.
+25. Mrz. 2012 -MW- Kleiner Bugfix in neuem CaesarEncrypt
+                   Algorithmus.

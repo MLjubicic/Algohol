@@ -9,6 +9,7 @@ package krypto.gui.main;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
+import javax.swing.JPanel;
 
 import krypto.gui.menu.MainMenuBar;
 
@@ -28,6 +29,11 @@ public class KryptoFrame {
 		bar = new MainMenuBar().initMenuBar();
 		
 		frame.setJMenuBar(bar);
+	}
+	
+	public void setPanel(JPanel panel) {
+		frame.add(panel);
+		frame.pack();
 	}
 	
 	public void setVisibility(Boolean sw) {

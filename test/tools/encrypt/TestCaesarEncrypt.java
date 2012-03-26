@@ -21,6 +21,8 @@ public class TestCaesarEncrypt {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CaesarEncrypt ce = new CaesarEncrypt("Fischers Fritz fischt frische Fische", 'G');
+		System.out.println("Plain:  " + ce.getPlain().toLowerCase());
+		System.out.println("Cipher: " + ce.getCipher());
 	}
 
 }
