@@ -7,14 +7,9 @@
  */
 package krypto.gui.panel;
 
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Insets;
-
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.border.Border;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic

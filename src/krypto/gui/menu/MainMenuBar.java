@@ -52,6 +52,10 @@ public class MainMenuBar {
 		caesarItem.setMnemonic('C');
 		cryptoMenu.add(caesarItem);
 		
+		JMenuItem skytaleItem = new JMenuItem("Skytale Chiffre");
+		skytaleItem.setMnemonic('S');
+		cryptoMenu.add(skytaleItem);
+		
 		
 		// ************** Help Menu **************
 		JMenu helpMenu = new JMenu("Help");
