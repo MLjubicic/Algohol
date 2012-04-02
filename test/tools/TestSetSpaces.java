@@ -25,6 +25,7 @@ public class TestSetSpaces {
 		System.out.println("Original String: " + str);
 		System.out.println("ohne Spaces: " + space.delete(str));
 		System.out.println("Space alle 4 Zeichen: " + space.fix(str, 4));
+		System.out.println("Space nach jedem Zeichen: " + space.fix(str, 1));
 	}
 
 }
