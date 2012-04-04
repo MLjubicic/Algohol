@@ -8,12 +8,14 @@
 package krypto.gui.panel;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import krypto.gui.action.FixSpacesListener;
 import krypto.gui.action.NoSpacesListener;
 
 /**
@@ -24,7 +26,9 @@ public class CaesarPanel {
 
 	private JPanel cPanel;
 	private JTextArea plainTAerea = new JTextArea();
+	private JTextField plainTField = new JTextField();
 	private NoSpacesListener nsl= new NoSpacesListener(plainTAerea);
+	private FixSpacesListener fsl = new FixSpacesListener(plainTAerea, plainTField);
 	
 	public CaesarPanel() {
 		cPanel = new JPanel();
@@ -49,11 +53,11 @@ public class CaesarPanel {
 		
 		JRadioButton fixSpacesBtn = new JRadioButton("fixed");
 		fixSpacesBtn.setBounds(225, 60, 60, 25);
+		fixSpacesBtn.addActionListener(fsl);
 		cPanel.add(fixSpacesBtn);
 		
-		JTextField spacesField = new JTextField();
-		spacesField.setBounds(285, 60, 30, 25);
-		cPanel.add(spacesField);
+		plainTField.setBounds(285, 60, 30, 25);
+		cPanel.add(plainTField);
 		
 		ButtonGroup spacesBtnGrp = new ButtonGroup();
 		spacesBtnGrp.add(noSpacesBtn);
@@ -67,6 +71,14 @@ public class CaesarPanel {
 		JTextArea cipherTAerea = new JTextArea();
 		cipherTAerea.setBounds(10, 160, 200, 100);
 		cPanel.add(cipherTAerea);
+		
+		JButton encryptBtn = new JButton("Encrypt");
+		encryptBtn.setBounds(10, 275, 95, 25);
+		cPanel.add(encryptBtn);
+		
+		JButton decryptBtn = new JButton("Decrypt");
+		decryptBtn.setBounds(110, 275, 100, 25);
+		cPanel.add(decryptBtn);
 		
 		cPanel.setBounds(0, 0, 250, 250);
 	}
