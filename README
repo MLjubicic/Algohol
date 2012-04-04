@@ -40,6 +40,17 @@
                    Algorithmus.
 26. Mrz. 2012 -MW- Klasse SetSpaces hinzugefügt.
               -MW- TestKlasse TestSetSpaces hinzugefügt.
+28. Mrz. 2012 -ML- Dokumentation nach GitHub verschoben für besseres Tracking
+01. Apr. 2012 -ML- Pivotal aktualisiert
+01. Apr. 2012 -ML- Dokumentation neu begonnen, da die Formatvorlagen in Word
+                   das Arbeiten unnötig komplizieren
+                   Einige Grundlagen zum Dokumentieren:
+                     - Formatieren nur wenn unbedingt nötig
+                       (math. Formeln, Fett, Kursiv, etc.)
+                     - das "Finish" wird in der letzten Iteration fixiert
+                     - jede externe Quelle direkt beim zitierten Text einfügen
+                       (wird später ins richtige Quellenverzeichnis eingefügt)
+03. Apr. 2012 -ML- Dokumentation aktualisiert
 
 **************************************************************
 *                   Mittwoch 4. April 2012                   *
