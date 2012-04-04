@@ -14,6 +14,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import krypto.gui.action.NoSpacesListener;
+
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
@@ -21,6 +23,8 @@ import javax.swing.JTextField;
 public class CaesarPanel {
 
 	private JPanel cPanel;
+	private JTextArea plainTAerea = new JTextArea();
+	private NoSpacesListener nsl= new NoSpacesListener(plainTAerea);
 	
 	public CaesarPanel() {
 		cPanel = new JPanel();
@@ -30,12 +34,12 @@ public class CaesarPanel {
 		plainLabel.setBounds(10, 10, 50, 25);
 		cPanel.add(plainLabel);
 		
-		JTextArea plainTAerea = new JTextArea();
 		plainTAerea.setBounds(10, 35, 200, 100);
 		cPanel.add(plainTAerea);
 		
 		JRadioButton noSpacesBtn = new JRadioButton("no spaces");
 		noSpacesBtn.setBounds(225, 35, 100, 25);
+		noSpacesBtn.addActionListener(nsl);
 		cPanel.add(noSpacesBtn);
 		
 		JRadioButton stdSpacesBtn = new JRadioButton("standard");

@@ -19,7 +19,7 @@ public class SetSpaces {
 	 * @return
 	 */
 	public String delete(String str) {
-		StringBuffer sbuff = new StringBuffer();
+		StringBuilder sbuff = new StringBuilder();
 		sbuff.setLength(str.length());
 		int current = 0;
 		for (int i = 0; i < str.length(); i++) {

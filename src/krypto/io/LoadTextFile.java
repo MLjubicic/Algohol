@@ -33,8 +33,7 @@ public class LoadTextFile {
 			e1.printStackTrace();
 		}
 		try {
-			for (@SuppressWarnings("unused")
-			int i; (i = reader.read()) != -1;) {
+			while(reader.read()!= -1) {
 				str = str + reader.readLine();
 			}
 		} catch (IOException e) {
