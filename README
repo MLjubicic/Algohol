@@ -51,6 +51,10 @@
                      - jede externe Quelle direkt beim zitierten Text einfügen
                        (wird später ins richtige Quellenverzeichnis eingefügt)
 03. Apr. 2012 -ML- Dokumentation aktualisiert
+04. Apr. 2012 -MW- FixSpacesListener hinzugefügt.
+              -MW- CaesarPanel fertiggestellt.
+              -MW- CaesarEncryptListener erstellt.
+              -MW- CaesarDecryptListener erstellt.
 
 **************************************************************
 *                   Mittwoch 4. April 2012                   *
