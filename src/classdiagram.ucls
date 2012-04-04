@@ -1,0 +1,192 @@
+<class-diagram version="1.0.7" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="krypto.data.Cipher" project="Algohol" 
+    file="/Algohol/src/krypto/data/Cipher.java" binary="false">    
+    <position height="163" width="156" x="953" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.action.ExitListener" project="Algohol" 
+    file="/Algohol/src/krypto/gui/action/ExitListener.java" binary="false">    
+    <position height="83" width="191" x="643" y="395"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.action.LoadListener" project="Algohol" 
+    file="/Algohol/src/krypto/gui/action/LoadListener.java" binary="false">    
+    <position height="83" width="191" x="874" y="395"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.action.NoSpacesListener" project="Algohol" 
+    file="/Algohol/src/krypto/gui/action/NoSpacesListener.java" binary="false">    
+    <position height="99" width="191" x="43" y="256"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.action.VersionListener" project="Algohol" 
+    file="/Algohol/src/krypto/gui/action/VersionListener.java" binary="false">    
+    <position height="83" width="191" x="1105" y="395"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.dialog.ExceptionDisplay" project="Algohol" 
+    file="/Algohol/src/krypto/gui/dialog/ExceptionDisplay.java" binary="false">    
+    <position height="67" width="141" x="667" y="753"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.dialog.FileChooser" project="Algohol" 
+    file="/Algohol/src/krypto/gui/dialog/FileChooser.java" binary="false">    
+    <position height="115" width="105" x="874" y="534"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.dialog.VersionInformation" project="Algohol" 
+    file="/Algohol/src/krypto/gui/dialog/VersionInformation.java" binary="false">    
+    <position height="67" width="131" x="1105" y="534"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.main.KryptoFrame" project="Algohol" 
+    file="/Algohol/src/krypto/gui/main/KryptoFrame.java" binary="false">    
+    <position height="131" width="147" x="1149" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.menu.MainMenuBar" project="Algohol" 
+    file="/Algohol/src/krypto/gui/menu/MainMenuBar.java" binary="false">    
+    <position height="99" width="138" x="942" y="256"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="krypto.gui.panel.CaesarPanel" project="Algohol" 
+    file="/Algohol/src/krypto/gui/panel/CaesarPanel.java" binary="false">    
+    <position height="115" width="141" x="43" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="krypto.io.LoadTextFile" project="Algohol" 
+    file="/Algohol/src/krypto/io/LoadTextFile.java" binary="false">    
+    <position height="115" width="106" x="521" y="534"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="krypto.tools.SetSpaces" project="Algohol" 
+    file="/Algohol/src/krypto/tools/SetSpaces.java" binary="false">    
+    <position height="99" width="119" x="43" y="395"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="krypto.tools.decrypt.CaesarBruteForce" project="Algohol" 
+    file="/Algohol/src/krypto/tools/decrypt/CaesarBruteForce.java" binary="false">    
+    <position height="179" width="191" x="722" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="15" corner="BOTTOM_RIGHT" language="java" name="krypto.tools.decrypt.FrequencyAnalyzer" project="Algohol" 
+    file="/Algohol/src/krypto/tools/decrypt/FrequencyAnalyzer.java" binary="false">    
+    <position height="179" width="236" x="446" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="krypto.tools.encrypt.CaesarEncrypt" project="Algohol" 
+    file="/Algohol/src/krypto/tools/encrypt/CaesarEncrypt.java" binary="false">    
+    <position height="163" width="182" x="224" y="37"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" name="krypto.tools.encrypt.SkytaleEncrypt" project="Algohol" 
+    file="/Algohol/src/krypto/tools/encrypt/SkytaleEncrypt.java" binary="false">    
+    <position height="179" width="167" x="667" y="534"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="18">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="19" name="nsl"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="22">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="24">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="30">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
