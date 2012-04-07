@@ -23,7 +23,7 @@ public class CaesarEncrypt {
 		this.key = Character.toUpperCase(key);
 		cipher = new String();
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		int k = abc.indexOf(this.key) + 1;
+		int k = abc.indexOf(this.key);
 		for (int i = 0; i < plain.length(); i++) {
 			Character z = this.plain.charAt(i);
 			if (z != ' ') {
