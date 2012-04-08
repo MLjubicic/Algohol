@@ -7,6 +7,7 @@
  */
 package krypto.gui.menu;
 
+import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -14,6 +15,7 @@ import javax.swing.JSeparator;
 
 import krypto.gui.action.ExitListener;
 import krypto.gui.action.LoadListener;
+import krypto.gui.action.SkytaleListener;
 import krypto.gui.action.VersionListener;
 
 /**
@@ -23,6 +25,12 @@ import krypto.gui.action.VersionListener;
 public class MainMenuBar {
 
 	private JMenuBar menuBar;
+	private JFrame frame;
+	private SkytaleListener skyl = new SkytaleListener(frame);
+	
+	public MainMenuBar(JFrame frame) {
+		this.frame = frame;
+	}
 
 	public JMenuBar initMenuBar() {
 		menuBar = new JMenuBar();
@@ -54,6 +62,7 @@ public class MainMenuBar {
 		
 		JMenuItem skytaleItem = new JMenuItem("Skytale Chiffre");
 		skytaleItem.setMnemonic('S');
+		skytaleItem.addActionListener(skyl);
 		cryptoMenu.add(skytaleItem);
 		
 		

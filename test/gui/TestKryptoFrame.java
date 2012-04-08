@@ -22,7 +22,6 @@ public class TestKryptoFrame {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		KryptoFrame kFrame = new KryptoFrame();
-		kFrame.initKryptoFrame();
 		// Test CaesarPanel
 		CaesarPanel cpanel = new CaesarPanel();
 		kFrame.setPanel(cpanel.getCaesarPanel());
