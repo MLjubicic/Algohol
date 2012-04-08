@@ -45,7 +45,12 @@ public class CaesarBruteForce {
 				}
 			}
 			plain = plain.toLowerCase();
-			report.put(abc.charAt(i), plain);
+			int x = 26 - i;
+			if (x == 26) {
+				x = 25;
+				report.put('A', cipher.toLowerCase());
+			}
+			report.put(abc.charAt(x), plain);
 			plain = "";
 		}
 		time = time + System.currentTimeMillis();

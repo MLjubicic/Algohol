@@ -22,13 +22,17 @@ public class SetSpaces {
 		StringBuilder sbuff = new StringBuilder();
 		sbuff.setLength(str.length());
 		int current = 0;
+		int count = 0;
 		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) != ' ') sbuff.setCharAt(current++, str.charAt(i));
+			if (str.charAt(i) != ' ') {
+				sbuff.setCharAt(current++, str.charAt(i));
+			} else count++;
 		}
+		sbuff.delete(sbuff.length() - count, sbuff.length());
 		str = sbuff.toString();
 		return str;
 	}
-	
+
 	/**
 	 * Method which interrupts each n characters by a space.
 	 * @param str
