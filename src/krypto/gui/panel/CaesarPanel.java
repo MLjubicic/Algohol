@@ -7,6 +7,8 @@
  */
 package krypto.gui.panel;
 
+import java.awt.ScrollPane;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -44,53 +46,54 @@ public class CaesarPanel {
 		plainLabel.setBounds(10, 10, 50, 25);
 		cPanel.add(plainLabel);
 		
-		plainTAerea.setBounds(10, 35, 200, 100);
-		cPanel.add(plainTAerea);
+		ScrollPane scrollPlain = new ScrollPane();
+		scrollPlain.setBounds(10, 35, 420, 250); 
+		scrollPlain.add(plainTAerea);
+
+		cPanel.add(scrollPlain);
+		
 		
 		JRadioButton noSpacesBtn = new JRadioButton("no spaces");
-		noSpacesBtn.setBounds(225, 35, 100, 25);
+		noSpacesBtn.setBounds(225, 10, 100, 25);
 		noSpacesBtn.addActionListener(nsl);
 		cPanel.add(noSpacesBtn);
 		
-		JRadioButton stdSpacesBtn = new JRadioButton("standard");
-		stdSpacesBtn.setBounds(330, 35, 100, 25);
-		stdSpacesBtn.setSelected(true);
-		cPanel.add(stdSpacesBtn);
-		
 		JRadioButton fixSpacesBtn = new JRadioButton("fixed");
-		fixSpacesBtn.setBounds(225, 60, 60, 25);
+		fixSpacesBtn.setBounds(330, 10, 60, 25);
 		fixSpacesBtn.addActionListener(fsl);
 		cPanel.add(fixSpacesBtn);
 		
-		fixedTField.setBounds(285, 60, 30, 25);
+		fixedTField.setBounds(400, 10, 30, 25);
 		cPanel.add(fixedTField);
 		
 		ButtonGroup spacesBtnGrp = new ButtonGroup();
 		spacesBtnGrp.add(noSpacesBtn);
-		spacesBtnGrp.add(stdSpacesBtn);
 		spacesBtnGrp.add(fixSpacesBtn);
 		
 		JLabel cipherLabel = new JLabel("Ciphertext");
-		cipherLabel.setBounds(10, 135, 75, 25);
+		cipherLabel.setBounds(10, 290, 75, 25);
 		cPanel.add(cipherLabel);
 		
-		cipherTAerea.setBounds(10, 160, 200, 100);
-		cPanel.add(cipherTAerea);
+		ScrollPane scrollCipher = new ScrollPane();
+		scrollCipher.setBounds(10, 320, 420, 250);
+		scrollCipher.add(cipherTAerea);
+		
+		cPanel.add(scrollCipher);
 		
 		JLabel keyLabel = new JLabel("Key");
-		keyLabel.setBounds(225, 135, 50, 25);
+		keyLabel.setBounds(225, 290, 30, 25);
 		cPanel.add(keyLabel);
 		
-		keyTField.setBounds(225, 160, 60, 25);
+		keyTField.setBounds(260, 290, 60, 25);
 		cPanel.add(keyTField);
 		
 		JButton encryptBtn = new JButton("Encrypt");
-		encryptBtn.setBounds(10, 275, 95, 25);
+		encryptBtn.setBounds(440, 35, 95, 25);
 		encryptBtn.addActionListener(cel);
 		cPanel.add(encryptBtn);
 		
 		JButton decryptBtn = new JButton("Decrypt");
-		decryptBtn.setBounds(110, 275, 100, 25);
+		decryptBtn.setBounds(440, 320, 100, 25);
 		decryptBtn.addActionListener(cdl);
 		cPanel.add(decryptBtn);
 		
