@@ -5,38 +5,24 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.data;
+package krypto.tools;
+
+import java.io.File;
+
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class Cipher {
+public class TextToString {
 
-	private String cstr;
-	private String pstr;
-	private String key;
+	private String str;
 	
-	public String getCipherString() {
-		return cstr;
+	public TextToString(File file) {
+		
 	}
 	
-	public String getPlainString() {
-		return pstr;
-	}
-	
-	public String getKey() {
-		return key;
-	}
-	
-	public void setCipherString (String str) {
-		this.cstr = str;
-	}
-	
-	public void setPlainString (String str) {
-		this.pstr = str;
-	}
-	public void setKey (String str) {
-		this.key = str;
+	public String getString() {
+		return str;
 	}
 }
