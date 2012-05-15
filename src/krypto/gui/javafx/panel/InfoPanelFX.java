@@ -5,20 +5,30 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.javafx;
+package krypto.gui.javafx.panel;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarFX extends Application{
+public class InfoPanelFX {
 
-	@Override
-	public void start(Stage arg0) throws Exception {
+	private StackPane pane;
+	
+	public InfoPanelFX() {
+		pane = new StackPane();
+		VBox vbox = new VBox();
 		
+		Label infoLabel = new Label("Version 1.0");
+		vbox.getChildren().add(infoLabel);
+		pane.getChildren().add(vbox);
 	}
-
+	
+	public StackPane getPane() {
+		return pane;
+	}
 }

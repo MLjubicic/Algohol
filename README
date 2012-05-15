@@ -69,3 +69,7 @@
 09. Apr. 2012 -MW- CaesarPanel "neues" Design verpasst, was zu einer besseren
                    Uebersicht führen soll.
               -MW- Klasse TextToString erstellt. 
+15. Mai  2012 -MW- Klasse Kryptonite erstellt (Main GUI mit JavaFX 2.1)
+              -MW- Klasse MainTree erstellt (dient der Navigation im GUI)
+              -MW- Klasse MainMenu erstellt
+              -MW- Klasse InfoPanelFX erstellt 
