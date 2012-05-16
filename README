@@ -73,3 +73,6 @@
               -MW- Klasse MainTree erstellt (dient der Navigation im GUI)
               -MW- Klasse MainMenu erstellt
               -MW- Klasse InfoPanelFX erstellt 
+16. Mai  2012 -MW- Rechtschreibkorrektur in MainTree
+              -MW- Klasse CaesarPanelFX erstellt
+                   Design ist fertig; noch keine Funktionalität

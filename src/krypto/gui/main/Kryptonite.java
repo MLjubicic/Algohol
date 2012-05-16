@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 import krypto.gui.javafx.MainMenu;
 import krypto.gui.javafx.MainTree;
+import krypto.gui.panel.CaesarPanelFX;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -44,6 +45,7 @@ public class Kryptonite extends Application{
 		BorderPane border = new BorderPane();
 		StackPane treePane =  new StackPane();
 		StackPane centerPane = new StackPane();
+		centerPane = new CaesarPanelFX().getPanel();
 		treePane.getChildren().add(tree);
 		
 		border.setLeft(treePane);

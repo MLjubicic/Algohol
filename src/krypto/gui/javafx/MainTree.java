@@ -19,18 +19,18 @@ public class MainTree {
 	
 	public MainTree() {
 		tree = new TreeItem<String> ("Kryptonite");
-		tree.setExpanded(false);
-		TreeItem<String> monoItem = new TreeItem<String> ("Monoalphabetic Chipers");
+		tree.setExpanded(true);
+		TreeItem<String> monoItem = new TreeItem<String> ("Monoalphabetic Ciphers");
 		tree.getChildren().add(monoItem);
-		TreeItem<String> caesarItem = new TreeItem<String> ("Caesar Chiper");
+		TreeItem<String> caesarItem = new TreeItem<String> ("Caesar Cipher");
 		monoItem.getChildren().add(caesarItem);
-		TreeItem<String> skytaleItem = new TreeItem<String>	("Skytale Chiper");
+		TreeItem<String> skytaleItem = new TreeItem<String>	("Skytale Cipher");
 		monoItem.getChildren().add(skytaleItem);
-		TreeItem<String> substItem = new TreeItem<String> ("Substitution Chiper");
+		TreeItem<String> substItem = new TreeItem<String> ("Substitution Cipher");
 		monoItem.getChildren().add(substItem);
-		TreeItem<String> polyItem = new TreeItem<String> ("Polyalphabetic Chipers");
+		TreeItem<String> polyItem = new TreeItem<String> ("Polyalphabetic Ciphers");
 		tree.getChildren().add(polyItem);
-		TreeItem<String> vigenereItem = new TreeItem<String> ("Vigenère Chiper");
+		TreeItem<String> vigenereItem = new TreeItem<String> ("Vigenère Cipher");
 		polyItem.getChildren().add(vigenereItem);
 	}
 	
