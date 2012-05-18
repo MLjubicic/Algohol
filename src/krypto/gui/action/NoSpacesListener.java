@@ -10,6 +10,8 @@ package krypto.gui.action;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javafx.scene.control.TextArea;
+
 import javax.swing.JTextArea;
 
 import krypto.tools.SetSpaces;
@@ -21,17 +23,24 @@ import krypto.tools.SetSpaces;
 public class NoSpacesListener implements ActionListener{
 
 	private JTextArea jt;
+	private TextArea fx;
 	
 	public NoSpacesListener(JTextArea jt) {
 		super();
 		this.jt = jt;
+	}
+	
+	public NoSpacesListener(TextArea fx) {
+		super();
+		this.fx = fx;
 	}
 
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		SetSpaces space = new SetSpaces();
-		jt.setText(space.delete(jt.getText()));
+		if (jt != null) jt.setText(space.delete(jt.getText()));
+		if (fx != null) fx.setText(space.delete(fx.getText()));
 	}
 
 }

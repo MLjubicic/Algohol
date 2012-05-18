@@ -18,6 +18,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import krypto.gui.action.NoSpacesListener;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -26,6 +27,11 @@ import javafx.scene.text.Text;
 public class CaesarPanelFX {
 
 	private StackPane panel;
+	TextArea plainText = new TextArea();
+	TextArea cipherText = new TextArea();
+	TextField fixField = new TextField();
+	TextField keyField = new TextField();
+	private NoSpacesListener nsl= new NoSpacesListener(plainText);
 	
 	public CaesarPanelFX() {
 		panel = new StackPane();
@@ -38,20 +44,19 @@ public class CaesarPanelFX {
 		Text plain = new Text("Plain");
 		plain.setFont(Font.font(null, FontWeight.BOLD, 12));
 		grid.add(plain, 1, 1);
-		
-		TextArea plainText = new TextArea();
+
 		grid.add(plainText, 1, 2, 2, 5);
 		
 		Button encryptButton = new Button("Encrypt");
 		grid.add(encryptButton, 4, 2, 2, 1);
 		
 		RadioButton noSpacesButton = new RadioButton("no spaces");
+		noSpacesButton.add
 		grid.add(noSpacesButton, 4, 3, 2, 1);
 		
 		RadioButton fixButton = new RadioButton("fix");
 		grid.add(fixButton, 4, 4);
 		
-		TextField fixField = new TextField();
 		grid.add(fixField, 5, 4);
 		
 		// ************** Lower half cipher text area **************
@@ -59,7 +64,6 @@ public class CaesarPanelFX {
 		cipher.setFont(Font.font(null, FontWeight.BOLD, 12));
 		grid.add(cipher, 1, 7);
 		
-		TextArea cipherText = new TextArea();
 		grid.add(cipherText, 1, 8, 2, 5);
 		
 		Button decryptButton = new Button("Decrypt");
@@ -68,7 +72,6 @@ public class CaesarPanelFX {
 		Text key = new Text("Key");
 		grid.add(key, 4, 9);
 		
-		TextField keyField = new TextField();
 		grid.add(keyField, 5, 9);
 		
 		panel.getChildren().add(grid);
