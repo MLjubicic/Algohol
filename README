@@ -64,6 +64,17 @@
 *                                                            *
 **************************************************************
 
+-------------------------------------------------------------
++++ Wegen Krankheit, Urlaub und Lernstress total verhauen +++
+-------------------------------------------------------------
+       Velocity voll ausgenutzt (Winterspeck ist weg!)
+
+**************************************************************
+*                    Dienstag 1. Mai 2012                    *
+*                                                            *
+*                        2. Iteration                        *
+*                                                            *
+**************************************************************
 05. Apr. 2012 -MW- Klasse SkytalePanel erstellt.
 07. Apr. 2012 -MW- Kleiner Fehler in CaesarEncrypt gefixt.
 09. Apr. 2012 -MW- CaesarPanel "neues" Design verpasst, was zu einer besseren
@@ -76,3 +87,11 @@
 16. Mai  2012 -MW- Rechtschreibkorrektur in MainTree
               -MW- Klasse CaesarPanelFX erstellt
                    Design ist fertig; noch keine Funktionalität
+23. Mai  2012 -MW- ToggleGroup für RadioButtons in CaesarPanelFX erstellt
+
+**************************************************************
+*                   Mittwoch 23. Mai 2012                    *
+*                                                            *
+*                        3. Iteration                        *
+*                                                            *
+**************************************************************

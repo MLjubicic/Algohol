@@ -7,18 +7,17 @@
  */
 package krypto.gui.panel;
 
-
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import krypto.gui.action.NoSpacesListener;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -31,7 +30,6 @@ public class CaesarPanelFX {
 	TextArea cipherText = new TextArea();
 	TextField fixField = new TextField();
 	TextField keyField = new TextField();
-	private NoSpacesListener nsl= new NoSpacesListener(plainText);
 	
 	public CaesarPanelFX() {
 		panel = new StackPane();
@@ -50,11 +48,14 @@ public class CaesarPanelFX {
 		Button encryptButton = new Button("Encrypt");
 		grid.add(encryptButton, 4, 2, 2, 1);
 		
+		ToggleGroup group = new ToggleGroup();
+		
 		RadioButton noSpacesButton = new RadioButton("no spaces");
-		noSpacesButton.add
+		noSpacesButton.setToggleGroup(group);
 		grid.add(noSpacesButton, 4, 3, 2, 1);
 		
 		RadioButton fixButton = new RadioButton("fix");
+		fixButton.setToggleGroup(group);
 		grid.add(fixButton, 4, 4);
 		
 		grid.add(fixField, 5, 4);
