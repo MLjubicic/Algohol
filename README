@@ -75,6 +75,7 @@
 *                        2. Iteration                        *
 *                                                            *
 **************************************************************
+
 05. Apr. 2012 -MW- Klasse SkytalePanel erstellt.
 07. Apr. 2012 -MW- Kleiner Fehler in CaesarEncrypt gefixt.
 09. Apr. 2012 -MW- CaesarPanel "neues" Design verpasst, was zu einer besseren
@@ -88,7 +89,9 @@
               -MW- Klasse CaesarPanelFX erstellt
                    Design ist fertig; noch keine Funktionalität
 23. Mai  2012 -MW- ToggleGroup für RadioButtons in CaesarPanelFX erstellt
-
+              -MW- Klasse FixSpacesEvent erstellt
+              -MW- Klasse NoSpacesEvent erstellt
+              
 **************************************************************
 *                   Mittwoch 23. Mai 2012                    *
 *                                                            *

@@ -7,6 +7,7 @@
  */
 package krypto.gui.panel;
 
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -18,6 +19,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import krypto.gui.action.FixSpacesEvent;
+import krypto.gui.action.NoSpacesEvent;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -26,10 +29,12 @@ import javafx.scene.text.Text;
 public class CaesarPanelFX {
 
 	private StackPane panel;
-	TextArea plainText = new TextArea();
-	TextArea cipherText = new TextArea();
-	TextField fixField = new TextField();
-	TextField keyField = new TextField();
+	private TextArea plainText = new TextArea();
+	private TextArea cipherText = new TextArea();
+	private TextField fixField = new TextField();
+	private TextField keyField = new TextField();
+	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
+	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
 	
 	public CaesarPanelFX() {
 		panel = new StackPane();
@@ -51,10 +56,12 @@ public class CaesarPanelFX {
 		ToggleGroup group = new ToggleGroup();
 		
 		RadioButton noSpacesButton = new RadioButton("no spaces");
+		noSpacesButton.addEventHandler(ActionEvent.ACTION, noEvent);
 		noSpacesButton.setToggleGroup(group);
 		grid.add(noSpacesButton, 4, 3, 2, 1);
 		
 		RadioButton fixButton = new RadioButton("fix");
+		fixButton.addEventHandler(ActionEvent.ACTION, fixEvent);
 		fixButton.setToggleGroup(group);
 		grid.add(fixButton, 4, 4);
 		

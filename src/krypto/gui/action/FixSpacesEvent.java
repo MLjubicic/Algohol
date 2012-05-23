@@ -7,30 +7,33 @@
  */
 package krypto.gui.action;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JTextArea;
-
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import krypto.tools.SetSpaces;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class NoSpacesListener implements ActionListener{
+public class FixSpacesEvent implements EventHandler<Event> {
 
-	private JTextArea jt;
+	private TextArea fx;
+	private TextField tf;
 	
-	public NoSpacesListener(JTextArea jt) {
+	public FixSpacesEvent(TextArea fx, TextField tf) {
 		super();
-		this.jt = jt;
+		this.fx = fx;
+		this.tf = tf;
 	}
-
+	
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		SetSpaces space = new SetSpaces();
-		if (jt != null) jt.setText(space.delete(jt.getText()));
+	public void handle(Event arg0) {
+		// TODO Auto-generated method stub
+		int n = Integer.valueOf(tf.getText());
+		SetSpaces spaces = new SetSpaces();
+		fx.setText(spaces.fix(fx.getText(), n));
 	}
 
 }
