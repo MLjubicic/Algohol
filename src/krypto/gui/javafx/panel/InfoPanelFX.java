@@ -17,18 +17,18 @@ import javafx.scene.layout.VBox;
  */
 public class InfoPanelFX {
 
-	private StackPane pane;
+	private StackPane panel;
 	
 	public InfoPanelFX() {
-		pane = new StackPane();
+		panel = new StackPane();
 		VBox vbox = new VBox();
 		
 		Label infoLabel = new Label("Version 1.0");
 		vbox.getChildren().add(infoLabel);
-		pane.getChildren().add(vbox);
+		panel.getChildren().add(vbox);
 	}
 	
-	public StackPane getPane() {
-		return pane;
+	public StackPane getPanel() {
+		return panel;
 	}
 }

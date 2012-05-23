@@ -93,6 +93,7 @@
               -MW- Klasse NoSpacesEvent erstellt und implementiert
               -MW- Klasse CaesarEncryptEvent erstellt und implementiert
               -ML- Dokumentation erweitert und neue UMLs generiert
+              -MW- Klasse CaesarDecryptEvent erstellt und implementiert
               
 **************************************************************
 *                   Mittwoch 23. Mai 2012                    *
