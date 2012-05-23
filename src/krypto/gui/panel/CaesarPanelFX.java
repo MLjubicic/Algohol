@@ -19,6 +19,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import krypto.gui.action.CaesarEncryptEvent;
 import krypto.gui.action.FixSpacesEvent;
 import krypto.gui.action.NoSpacesEvent;
 
@@ -35,6 +36,7 @@ public class CaesarPanelFX {
 	private TextField keyField = new TextField();
 	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
 	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
+	private CaesarEncryptEvent encryptEvent = new CaesarEncryptEvent(plainText, cipherText, keyField);
 	
 	public CaesarPanelFX() {
 		panel = new StackPane();
@@ -51,6 +53,7 @@ public class CaesarPanelFX {
 		grid.add(plainText, 1, 2, 2, 5);
 		
 		Button encryptButton = new Button("Encrypt");
+		encryptButton.addEventHandler(ActionEvent.ACTION, encryptEvent);
 		grid.add(encryptButton, 4, 2, 2, 1);
 		
 		ToggleGroup group = new ToggleGroup();

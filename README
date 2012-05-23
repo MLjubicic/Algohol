@@ -89,8 +89,9 @@
               -MW- Klasse CaesarPanelFX erstellt
                    Design ist fertig; noch keine Funktionalität
 23. Mai  2012 -MW- ToggleGroup für RadioButtons in CaesarPanelFX erstellt
-              -MW- Klasse FixSpacesEvent erstellt
-              -MW- Klasse NoSpacesEvent erstellt
+              -MW- Klasse FixSpacesEvent erstellt und implementiert
+              -MW- Klasse NoSpacesEvent erstellt und implementiert
+              -MW- Klasse CaesarEncryptEvent erstellt und implementiert
               
 **************************************************************
 *                   Mittwoch 23. Mai 2012                    *
