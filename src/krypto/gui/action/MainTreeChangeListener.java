@@ -3,8 +3,6 @@
  */
 package krypto.gui.action;
 
-import javax.swing.event.ChangeEvent;
-
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TreeItem;

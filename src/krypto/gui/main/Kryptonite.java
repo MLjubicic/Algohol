@@ -8,25 +8,17 @@
 package krypto.gui.main;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import javafx.scene.control.TreeView.EditEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import krypto.gui.action.MainTreeChangeListener;
-import krypto.gui.action.MainTreeEvent;
-import krypto.gui.javafx.MainMenu;
 import krypto.gui.javafx.MainTree;
-import krypto.gui.javafx.panel.InfoPanelFX;
+import krypto.gui.menu.MainMenu;
 import krypto.gui.panel.CaesarPanelFX;
 
 /**
