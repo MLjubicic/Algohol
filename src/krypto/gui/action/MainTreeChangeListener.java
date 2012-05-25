@@ -7,7 +7,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TreeItem;
 import krypto.gui.main.Kryptonite;
-import krypto.gui.panel.CaesarPanelFX;
 
 /**
  * @author Bunny
@@ -27,7 +26,8 @@ public class MainTreeChangeListener implements ChangeListener{
 		// TODO Auto-generated method stub
 		TreeItem treeItem = (TreeItem)newValue;
 		String str = treeItem.toString();
-		if (str.contains("Caesar")) krypton.setCenterPane(new CaesarPanelFX().getPanel());
+		if (str.contains("Caesar")) System.out.println("Gotcha !!!");
+//		if (str.contains("Caesar")) krypton.setCenterPane(new CaesarPanelFX().getPanel());
 	}
 
 }

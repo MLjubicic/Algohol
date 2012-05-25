@@ -17,9 +17,11 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import krypto.gui.action.MainTreeChangeListener;
-import krypto.gui.javafx.MainTree;
+import krypto.gui.javafx.elements.CaesarHeader;
+import krypto.gui.javafx.elements.CaesarLeft;
+import krypto.gui.javafx.elements.MainTree;
+import krypto.gui.javafx.panel.MainPanelFX;
 import krypto.gui.menu.MainMenu;
-import krypto.gui.panel.CaesarPanelFX;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -27,7 +29,7 @@ import krypto.gui.panel.CaesarPanelFX;
  */
 public class Kryptonite extends Application{
 	
-	private StackPane centerPane;
+//	private StackPane centerPane;
 
 	/**
 	 * @param args
@@ -50,18 +52,18 @@ public class Kryptonite extends Application{
 		BorderPane border = new BorderPane();
 		StackPane treePane =  new StackPane();
 		StackPane centerPane = new StackPane();
-		centerPane = new CaesarPanelFX().getPanel();
+		centerPane = new MainPanelFX(new CaesarHeader().getPanel(), new CaesarLeft().getPanel(), null, null).getPanel();
 		treePane.getChildren().add(tree);
 		
 		border.setLeft(treePane);
 		border.setTop(menuBar);
 		border.setCenter(centerPane);
 		
-		primaryStage.setScene(new Scene(border, 300,250));
+		primaryStage.setScene(new Scene(border));
 		primaryStage.show();
 	}
 
-	public void setCenterPane(StackPane pane) {
-		centerPane = pane;
-	}
+//	public void setCenterPane(StackPane pane) {
+//		centerPane = pane;
+//	}
 }
