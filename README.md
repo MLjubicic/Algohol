@@ -8,6 +8,7 @@
 - Hauptstruktur erstellt *(MW)*
 - Klasse Filechooser erstellt *(MW)*
 - Klasse ExceptionDisplay erstellt *(MW)*
+
 **16. März 2012**
          
 - TestKlasse TestExceptionDisplay erstellt *(MW)*
@@ -16,93 +17,132 @@
 - TestKlasse TestLoadTextFile erstellt *(MW)*
 - TestKlasse TestFrequencyAnalyzer erstellt *(MW)*
 
-17. Mrz. 2012 -MW- FrequencyAnalyzer kann nun Zeichen zählen,
-                   den prozentualen Anteil berechnen in 
-                   welchem die Zeichen Auftreten
-18. Mrz. 2012 -MW- Klasse KryptoFrame erstellt
-              -MW- TestKlasse TestKryptoFrame erstellt
-              -MW- Klasse MainMenuBar erstellt, File- & Help
-              -MW- Menu hinzugefügt 
-              -MW- Klasse VersionInformation erstellt
-              -MW- Klasse VersionListener erstellt
-              -MW- Klasse ExitListener erstellt
-              -MW- Klasse LoadListener erstellt
-19. Mrz. 2012 -MW- Klasse CaesarBruteForce erstellt
-              -MW- TestKlasse TestCaesarBruteForce erstellt
-20. Mrz. 2012 -MW- Klasse CaesarEncrypt erstellt
-              -MW- TestKlasse TestCaesarEncrypt erstellt.
-22. Mrz. 2012 -MW- Minor Bug fixed in CaesarEncrypt.
-              -MW- Klasse CaesarPanel erstellt.
-              -MW- CaesarBruteForce misst die Zeit welche zum
-                   knacken benötigt wird.
-23. Mrz. 2012 -MW- CaesarEncrypt verwendet nun einen schoeneren
-                   Algorithmus.
-              -MW- Klasse SkytaleEncrypt hinzugefügt.
-25. Mrz. 2012 -MW- Kleiner Bugfix in neuem CaesarEncrypt
-                   Algorithmus.
-26. Mrz. 2012 -MW- Klasse SetSpaces hinzugefügt.
-              -MW- TestKlasse TestSetSpaces hinzugefügt.
-28. Mrz. 2012 -ML- Dokumentation nach GitHub verschoben für besseres Tracking
-01. Apr. 2012 -ML- Pivotal aktualisiert
-01. Apr. 2012 -ML- Dokumentation neu begonnen, da die Formatvorlagen in Word
-                   das Arbeiten unnötig komplizieren
-                   Einige Grundlagen zum Dokumentieren:
-                     - Formatieren nur wenn unbedingt nötig
-                       (math. Formeln, Fett, Kursiv, etc.)
-                     - das "Finish" wird in der letzten Iteration fixiert
-                     - jede externe Quelle direkt beim zitierten Text einfügen
-                       (wird später ins richtige Quellenverzeichnis eingefügt)
-03. Apr. 2012 -ML- Dokumentation aktualisiert
-04. Apr. 2012 -MW- FixSpacesListener hinzugefügt.
-              -MW- CaesarPanel fertiggestellt.
-              -MW- CaesarEncryptListener erstellt.
-              -MW- CaesarDecryptListener erstellt.
-04. Apr. 2012 -ML- Dokumentation aktualisiert (Kryptoanalyse und Vigènere)
+**17. März 2012** 
 
-**************************************************************
-*                   Mittwoch 4. April 2012                   *
-*                                                            *
-*                        1. Iteration                        *
-*                                                            *
-**************************************************************
+- FrequencyAnalyzer kann nun Zeichen zählen, den prozentualen Anteil berechnen in 
+  welchem die Zeichen Auftreten *(MW)*
+  
+**18. März 2012**
 
--------------------------------------------------------------
-+++ Wegen Krankheit, Urlaub und Lernstress total verhauen +++
--------------------------------------------------------------
-       Velocity voll ausgenutzt (Winterspeck ist weg!)
+- Klasse KryptoFrame erstellt *(MW)*
+- TestKlasse TestKryptoFrame erstellt *(MW)*
+- Klasse MainMenuBar erstellt, File- & Help *(MW)*
+- Menu hinzugefügt  *(MW)*
+- Klasse VersionInformation erstellt *(MW)*
+- Klasse VersionListener erstellt *(MW)*
+- Klasse ExitListener erstellt *(MW)*
+- Klasse LoadListener erstellt *(MW)*
 
-**************************************************************
-*                    Dienstag 1. Mai 2012                    *
-*                                                            *
-*                        2. Iteration                        *
-*                                                            *
-**************************************************************
+**19. Mrz. 2012**
 
-05. Apr. 2012 -MW- Klasse SkytalePanel erstellt.
-07. Apr. 2012 -MW- Kleiner Fehler in CaesarEncrypt gefixt.
-09. Apr. 2012 -MW- CaesarPanel "neues" Design verpasst, was zu einer besseren
-                   Uebersicht führen soll.
-              -MW- Klasse TextToString erstellt. 
-15. Mai  2012 -MW- Klasse Kryptonite erstellt (Main GUI mit JavaFX 2.1)
-              -MW- Klasse MainTree erstellt (dient der Navigation im GUI)
-              -MW- Klasse MainMenu erstellt
-              -MW- Klasse InfoPanelFX erstellt 
-16. Mai  2012 -MW- Rechtschreibkorrektur in MainTree
-              -MW- Klasse CaesarPanelFX erstellt
-                   Design ist fertig; noch keine Funktionalität
-23. Mai  2012 -MW- ToggleGroup für RadioButtons in CaesarPanelFX erstellt
-              -MW- Klasse FixSpacesEvent erstellt und implementiert
-              -MW- Klasse NoSpacesEvent erstellt und implementiert
-              -MW- Klasse CaesarEncryptEvent erstellt und implementiert
-              -ML- Dokumentation erweitert und neue UMLs generiert
-              -MW- Klasse CaesarDecryptEvent erstellt und implementiert
-              
-**************************************************************
-*                   Mittwoch 23. Mai 2012                    *
-*                                                            *
-*                        3. Iteration                        *
-*                                                            *
-**************************************************************
+- Klasse CaesarBruteForce erstellt *(MW)*
+- TestKlasse TestCaesarBruteForce erstellt *(MW)*
 
-24. Mai  2012 -MW- Clean-UP von unbenutzten Klassen nach Migration zu 
-                   JavaFX
+**20. März 2012**
+
+- Klasse CaesarEncrypt erstellt *(MW)*
+- TestKlasse TestCaesarEncrypt erstellt. *(MW)*
+
+**22. März 2012** 
+
+- Minor Bug fixed in CaesarEncrypt. *(MW)*
+- Klasse CaesarPanel erstellt. *(MW)*
+- CaesarBruteForce misst die Zeit welche zum knacken benötigt wird. *(MW)*
+
+**23. März 2012**
+
+- CaesarEncrypt verwendet nun einen schoeneren Algorithmus. *(MW)*
+- Klasse SkytaleEncrypt hinzugefügt. *(MW)*
+
+**25. März 2012**
+
+- Kleiner Bugfix in neuem CaesarEncrypt Algorithmus. *(MW)*
+
+**26. März 2012**
+
+- Klasse SetSpaces hinzugefügt. *(MW)*
+- TestKlasse TestSetSpaces hinzugefügt. *(MW)*
+
+**28. März 2012** 
+
+- Dokumentation nach GitHub verschoben für besseres Tracking *(ML)*
+
+**01. April 2012**
+
+ - Pivotal aktualisiert *(ML)*
+ 
+**01. April 2012**
+- Dokumentation neu begonnen, da die Formatvorlagen in Word
+  das Arbeiten unnötig komplizieren
+  Einige Grundlagen zum Dokumentieren:
+  - Formatieren nur wenn unbedingt nötig (math. Formeln, Fett, Kursiv, etc.)
+  - das "Finish" wird in der letzten Iteration fixiert
+  - jede externe Quelle direkt beim zitierten Text einfügen
+    (wird später ins richtige Quellenverzeichnis eingefügt) *(ML)*
+    
+**03. April 2012**
+ 
+- Dokumentation aktualisiert *(ML)*
+ 
+**04. April 2012**
+
+- FixSpacesListener hinzugefügt. *(MW)*
+- CaesarPanel fertiggestellt. *(MW)*
+- CaesarEncryptListener erstellt. *(MW)*
+- CaesarDecryptListener erstellt. *(MW)*
+
+**04. April 2012**
+
+- Dokumentation aktualisiert (Kryptoanalyse und Vigènere) *(ML)*
+
+##1. Iteration Mittwoch 4. April 2012
+
+###+++ Wegen Krankheit, Urlaub und Lernstress total verhauen +++
+###       Velocity voll ausgenutzt (Winterspeck ist weg!)
+
+##2. Iteration Dienstag 1. Mai 2012
+
+**05. April 2012**
+
+- Klasse SkytalePanel erstellt. *(MW)*
+
+**07. April 2012**
+
+- Kleiner Fehler in CaesarEncrypt gefixt. *(MW)*
+
+**09. April 2012**
+
+- CaesarPanel "neues" Design verpasst, was zu einer besseren
+  Uebersicht führen soll. *(MW)*
+- Klasse TextToString erstellt. *(MW)*
+ 
+**15. Mai 2012**
+
+- Klasse Kryptonite erstellt (Main GUI mit JavaFX 2.1) *(MW)*
+- Klasse MainTree erstellt (dient der Navigation im GUI) *(MW)*
+- Klasse MainMenu erstellt *(MW)*
+- Klasse InfoPanelFX erstellt *(MW)*
+ 
+**16. Mai 2012**
+
+- Rechtschreibkorrektur in MainTree *(MW)*
+- Klasse CaesarPanelFX erstellt Design ist fertig; noch keine Funktionalität *(MW)*
+
+**23. Mai 2012**
+
+- ToggleGroup für RadioButtons in CaesarPanelFX erstellt *(MW)*
+- Klasse FixSpacesEvent erstellt und implementiert *(MW)*
+- Klasse NoSpacesEvent erstellt und implementiert *(MW)*
+- Klasse CaesarEncryptEvent erstellt und implementiert *(MW)*
+- Dokumentation erweitert und neue UMLs generiert *(MW)*
+- Klasse CaesarDecryptEvent erstellt und implementiert *(MW)*
+
+##3. Iteration Mittwoch 23. Mai 2012
+
+**24. Mai 2012**
+
+- Clean-UP von unbenutzten Klassen nach Migration zu JavaFX *(MW)*
+
+**25. Mai 2012**
+
+- ReadMe von Text zu MarDown migriert *(MW)*
