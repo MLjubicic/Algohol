@@ -142,7 +142,17 @@
 **24. Mai 2012**
 
 - Clean-UP von unbenutzten Klassen nach Migration zu JavaFX *(MW)*
+- Klasse MainPanelFX erstellt. *(MW)*
+- Klassen CaesarHeader und CaesarLeft erstellt *(MW)*
 
 **25. Mai 2012**
 
-- ReadMe von Text zu MarDown migriert *(MW)*
+- ReadMe von Text zu MarkDown migriert *(MW)*
+- Klasse Version2 erstellt
+  Es gibt Probleme mit der Migration zu Code der einen besseren
+  objekt orientierten Ansatz verfolgt. Kryptonite funktioniert noch
+  mit den "alten" JavaFX Klassen. Version2 dient dazu die neuen Klassen des 
+  GUI zu testen. Momentan macht aber die zukünftige GUI Klasse MainPanelFX sorgen. 
+
+#
+#Präsentation des Projekts 15. Juni 2012
