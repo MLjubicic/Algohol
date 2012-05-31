@@ -29,7 +29,7 @@ private TextArea ta = new TextArea();
 	@Override
 	public void handle(Event arg0) {
 		// TODO Auto-generated method stub
-		CaesarBruteForce cbf = new CaesarBruteForce(ta.getText());
+		CaesarBruteForce cbf = new CaesarBruteForce(ta.getText().toUpperCase());
 		
 		// Dieser Teil des Codes muss nach 1. Iteration durch den finalen Code ersetzt werden
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

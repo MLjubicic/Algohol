@@ -154,5 +154,11 @@
   mit den "alten" JavaFX Klassen. Version2 dient dazu die neuen Klassen des 
   GUI zu testen. Momentan macht aber die zukünftige GUI Klasse MainPanelFX sorgen. 
 
+
+**30. Mai 2012**
+
+- Kryptonite angepasst, so das MainTreeChangeListener funktionert
+- Kleinerer Bugfix in CaesarBruteForce
+
 #
 #Präsentation des Projekts 15. Juni 2012

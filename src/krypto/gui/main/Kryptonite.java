@@ -21,6 +21,7 @@ import krypto.gui.javafx.elements.CaesarHeader;
 import krypto.gui.javafx.elements.CaesarLeft;
 import krypto.gui.javafx.elements.MainTree;
 import krypto.gui.javafx.panel.CaesarPanelFX;
+import krypto.gui.javafx.panel.InfoPanelFX;
 import krypto.gui.javafx.panel.MainPanelFX;
 import krypto.gui.menu.MainMenu;
 
@@ -30,7 +31,9 @@ import krypto.gui.menu.MainMenu;
  */
 public class Kryptonite extends Application{
 	
-//	private StackPane centerPane;
+	private StackPane centerPane;
+	private Stage ps;
+	private BorderPane border = new BorderPane();
 
 	/**
 	 * @param args
@@ -42,28 +45,34 @@ public class Kryptonite extends Application{
 
 	@Override
 	public void start(Stage primaryStage) {
-		primaryStage.setTitle("Kryptonite - Software Project 2");
-		primaryStage.setFullScreen(true);
+		ps = primaryStage;
+		ps.setTitle("Kryptonite - Software Project 2");
+		ps.setFullScreen(true);
 		
 		TreeView<String> tree = new TreeView<String> (new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
 		MenuBar menuBar = new MainMenu().getMenu();
 		
-		BorderPane border = new BorderPane();
 		StackPane treePane =  new StackPane();
-		StackPane centerPane = new CaesarPanelFX().getPanel();
+//		StackPane centerPane = new CaesarPanelFX().getPanel();
+		centerPane = new InfoPanelFX().getPanel();
 		treePane.getChildren().add(tree);
 		
 		border.setLeft(treePane);
 		border.setTop(menuBar);
 		border.setCenter(centerPane);
 		
-		primaryStage.setScene(new Scene(border));
-		primaryStage.show();
+		ps.setScene(new Scene(border));
+		ps.show();
 	}
 
-//	public void setCenterPane(StackPane pane) {
-//		centerPane = pane;
-//	}
+	public void setCenterPane(StackPane pane) {
+
+//		BorderPane border = new BorderPane();
+		centerPane = pane;
+		border.setCenter(centerPane);
+		ps.show();
+	}
+	
 }

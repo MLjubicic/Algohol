@@ -28,7 +28,7 @@ public class CaesarBruteForce {
 	public CaesarBruteForce(String cipher) {
 		time = -System.currentTimeMillis();
 		report = new HashMap<Character, String>();
-		this.cipher = cipher;
+		this.cipher = cipher.toUpperCase();
 		plain = new String();
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		for(int i = 0; i <= 25; i++) {
