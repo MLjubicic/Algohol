@@ -1,5 +1,16 @@
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  +      Zuercher Hochschule angewandter Wissenschaften      +
+ *  +                    Software Projekt 2                    +
+ *  +                                                          +
+ *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ */
 package krypto.data;
 
+/**
+ * @author Mathias Weigert & Miro Ljubicic
+ * @version 1.0
+ */
 public enum Alphabet {
 
 	A(6.51),

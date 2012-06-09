@@ -1,5 +1,11 @@
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  +      Zuercher Hochschule angewandter Wissenschaften      +
+ *  +                    Software Projekt 2                    +
+ *  +                                                          +
+ *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ */
 package krypto.gui.javafx.charts;
-import java.util.Map;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -8,34 +14,40 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
-import krypto.data.abcFrequency;
+import krypto.data.Alphabet;
 
+/**
+ * @author Mathias Weigert & Miro Ljubicic
+ * @version 1.0
+ */
 public class FrequencyChart extends Application{
 
-	@Override public void start(Stage stage) {
-		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		Map<Integer, Double> abcMap = new abcFrequency().getAbc();
+	private String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+	public void start(Stage stage) {
+		NumberAxis yAxis = new NumberAxis();
+		CategoryAxis xAxis = new CategoryAxis();
+		BarChart<String, Number> bc = new BarChart<String, Number>(xAxis,yAxis);
+
 		stage.setTitle("Kryptonite -> Frequency Analysis");
-		final NumberAxis yAxis = new NumberAxis();
-		final CategoryAxis xAxis = new CategoryAxis();
-		final BarChart<String, Number> bc =
-				new BarChart<String, Number>(xAxis,yAxis);
 		bc.setTitle("Frequency Analysis");
 		yAxis.setLabel("Percentage");
 		xAxis.setLabel("Alphabet");
-		
-		XYChart.Series series1 = new XYChart.Series();
-		series1.setName("Plain");
-		for (int i = 1; i<= 25; i++) {
-			series1.getData().add(new XYChart.Data(String.valueOf(abc.charAt(i-1)), abcMap.get(i)));
-		}
-//		series1.getData().add(new XYChart.Data("A", 1.1));
-		
-//		XYChart.Series series2 = new XYChart.Series();
-//		series2.setName("Cipher");
 
+		XYChart.Series plainSeries = new XYChart.Series<String, Number>();
+		plainSeries.setName("Plain");
+		for (Alphabet abc : Alphabet.values()) {
+			plainSeries.getData().add(new XYChart.Data<String, Number>(abc.name(), abc.getFrequency()));
+		}
+
+		XYChart.Series<String, Number> cipherSeries = new XYChart.Series<String, Number>();
+		cipherSeries.setName("Cipher");
+		for (Alphabet def : Alphabet.values()) {
+			cipherSeries.getData().add(new XYChart.Data<String, Number>(def.name(), def.getFrequency()));
+		}
+		
 		Scene scene = new Scene(bc,800,600);
-		bc.getData().addAll(series1);
+		bc.getData().addAll(plainSeries, cipherSeries);
 		stage.setScene(scene);
 		stage.show();
 	}

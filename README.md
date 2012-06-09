@@ -164,6 +164,7 @@
 
 - Enum Alphabet erstellt, in welchen die Häufigkeitsverteilung der Buchstaben
   in deutschen Texten hinterlegt ist. *(MW)*
+- Klasse FrequencyChart implementiert und Funktion überprüft. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
