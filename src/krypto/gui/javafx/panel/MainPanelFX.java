@@ -13,6 +13,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
@@ -37,7 +38,8 @@ public class MainPanelFX {
 	
 	public MainPanelFX(StackPane top, StackPane left, StackPane right, StackPane bottom) {
 		panel = new StackPane();
-		BorderPane border = new BorderPane();
+//		BorderPane border = new BorderPane();
+		AnchorPane anchor = new AnchorPane();
 		
 		// ************** Creating CenterPanel with main elements **************
 		StackPane center = new StackPane();
@@ -76,13 +78,22 @@ public class MainPanelFX {
 		
 		panel.getChildren().add(grid);
 		
-		if (top != null) border.getChildren().add(top);
-		if (left != null) border.getChildren().add(left);
-		border.getChildren().add(center);
-		if (right != null) border.getChildren().add(right);
-		if (bottom != null) border.getChildren().add(bottom);
-		
-		panel.getChildren().add(border);
+		if (top != null) {
+			anchor.getChildren().add(top);
+			anchor.setTopAnchor(top, 10.0);
+		}
+		if (left != null) {
+			anchor.getChildren().add(left);
+			anchor.setLeftAnchor(left, 3.0);
+		}
+		anchor.getChildren().add(center);
+//		if (top != null) border.getChildren().add(top);
+//		if (left != null) border.getChildren().add(left);
+//		border.getChildren().add(center);
+//		if (right != null) border.getChildren().add(right);
+//		if (bottom != null) border.getChildren().add(bottom);
+//		
+//		panel.getChildren().add(border);
 	}
 	
 	public StackPane getPanel() {

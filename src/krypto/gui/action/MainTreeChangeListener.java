@@ -7,6 +7,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TreeItem;
 import krypto.gui.javafx.panel.CaesarPanelFX;
+import krypto.gui.javafx.panel.MainPanelFX;
 import krypto.gui.main.Kryptonite;
 
 /**
@@ -28,7 +29,10 @@ public class MainTreeChangeListener implements ChangeListener{
 		TreeItem treeItem = (TreeItem)newValue;
 		String str = treeItem.toString();
 //		if (str.contains("Caesar")) System.out.println("Gotcha !!!");
-		if (str.contains("Caesar")) krypton.setCenterPane(new CaesarPanelFX().getPanel());
+		if (str.contains("Caesar")) {
+//			krypton.setCenterPane(new CaesarPanelFX().getPanel());
+			krypton.setCenterPane(new MainPanelFX(null, null, null, null).getPanel());
+		}
 
 	}
 

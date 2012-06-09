@@ -152,13 +152,17 @@
   Es gibt Probleme mit der Migration zu Code der einen besseren
   objekt orientierten Ansatz verfolgt. Kryptonite funktioniert noch
   mit den "alten" JavaFX Klassen. Version2 dient dazu die neuen Klassen des 
-  GUI zu testen. Momentan macht aber die zukünftige GUI Klasse MainPanelFX sorgen. 
+  GUI zu testen. Momentan macht aber die zukünftige GUI Klasse MainPanelFX sorgen. *(MW)*
 
 
 **30. Mai 2012**
 
-- Kryptonite angepasst, so das MainTreeChangeListener funktionert
-- Kleinerer Bugfix in CaesarBruteForce
+- Kryptonite angepasst, so das MainTreeChangeListener funktionert *(MW)*
+- Kleinerer Bugfix in CaesarBruteForce *(MW)*
+
+**31. Mai 2012**
+
+- 
 
 #
 #Präsentation des Projekts 15. Juni 2012
