@@ -160,9 +160,10 @@
 - Kryptonite angepasst, so das MainTreeChangeListener funktionert *(MW)*
 - Kleinerer Bugfix in CaesarBruteForce *(MW)*
 
-**31. Mai 2012**
+**09. Juni 2012**
 
-- 
+- Enum Alphabet erstellt, in welchen die Häufigkeitsverteilung der Buchstaben
+  in deutschen Texten hinterlegt ist. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
