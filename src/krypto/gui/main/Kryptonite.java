@@ -47,7 +47,7 @@ public class Kryptonite extends Application{
 	public void start(Stage primaryStage) {
 		ps = primaryStage;
 		ps.setTitle("Kryptonite - Software Project 2");
-		ps.setFullScreen(true);
+//		ps.setFullScreen(true);
 		
 		TreeView<String> tree = new TreeView<String> (new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -63,6 +63,7 @@ public class Kryptonite extends Application{
 		border.setCenter(centerPane);
 		
 		ps.setScene(new Scene(border));
+		ps.sizeToScene();
 		ps.show();
 	}
 
@@ -70,6 +71,7 @@ public class Kryptonite extends Application{
 
 		centerPane = pane;
 		border.setCenter(centerPane);
+		ps.sizeToScene();
 		ps.show();
 	}
 	
