@@ -20,8 +20,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import krypto.gui.action.FixSpacesEvent;
-import krypto.gui.action.NoSpacesEvent;
+import krypto.gui.action.panel.FixSpacesEvent;
+import krypto.gui.action.panel.NoSpacesEvent;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic

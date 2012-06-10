@@ -16,7 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import krypto.gui.action.MainTreeChangeListener;
+import krypto.gui.action.menu.MainTreeChangeListener;
 import krypto.gui.javafx.elements.CaesarHeader;
 import krypto.gui.javafx.elements.CaesarLeft;
 import krypto.gui.javafx.elements.MainTree;
@@ -52,7 +52,7 @@ public class Kryptonite extends Application{
 		TreeView<String> tree = new TreeView<String> (new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
-		MenuBar menuBar = new MainMenu(ps).getMenu();
+		MenuBar menuBar = new MainMenu(ps, this).getMenu();
 		
 		StackPane treePane =  new StackPane();
 		centerPane = new InfoPanelFX().getPanel();
@@ -68,7 +68,6 @@ public class Kryptonite extends Application{
 
 	public void setCenterPane(StackPane pane) {
 
-//		BorderPane border = new BorderPane();
 		centerPane = pane;
 		border.setCenter(centerPane);
 		ps.show();

@@ -5,30 +5,36 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.action;
+package krypto.gui.action.menu;
 
-import javafx.event.Event;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javafx.event.EventHandler;
-import javafx.scene.control.TextArea;
-import krypto.tools.SetSpaces;
+
+import krypto.gui.dialog.FileChooser;
+import krypto.io.LoadTextFile;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class NoSpacesEvent implements EventHandler<Event>{
-	
-	private TextArea ta;
-	
-	public NoSpacesEvent(TextArea ta) {
-		this.ta = ta;
-	}
+public class LoadListener implements EventHandler<javafx.event.ActionEvent> {
 
+	public LoadListener() {
+		super();
+		
+	}
+	
 	@Override
-	public void handle(Event arg0) {
+	public void handle(javafx.event.ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		SetSpaces space = new SetSpaces();
-		if (ta.getText() != null) ta.setText(space.delete(ta.getText()));
+		FileChooser fc = new FileChooser();
+		fc.setTextFile();
+		
+		LoadTextFile ltf = new LoadTextFile();
+		ltf.loadFile(fc.getFile());
+		
 	}
 
 }

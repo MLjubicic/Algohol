@@ -5,22 +5,29 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.action;
+package krypto.gui.action.menu;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javafx.event.EventHandler;
 
-import krypto.gui.dialog.VersionInformation;
+import krypto.gui.javafx.panel.InfoPanelFX;
+import krypto.gui.main.Kryptonite;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class VersionListener implements ActionListener{
+public class VersionListener implements EventHandler<javafx.event.ActionEvent>{
+
+	private Kryptonite krypto;
+	
+	public VersionListener(Kryptonite krypto) {
+		super();
+		this.krypto = krypto;
+	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void handle(javafx.event.ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		new VersionInformation();
+		krypto.setCenterPane(new InfoPanelFX().getPanel());
 	}
 }

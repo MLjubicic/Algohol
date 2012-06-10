@@ -5,7 +5,7 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.action;
+package krypto.gui.action.panel;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;

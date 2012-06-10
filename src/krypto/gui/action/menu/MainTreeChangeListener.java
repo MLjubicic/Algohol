@@ -1,7 +1,7 @@
 /**
  * 
  */
-package krypto.gui.action;
+package krypto.gui.action.menu;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

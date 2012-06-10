@@ -171,7 +171,9 @@
 
 - CaesarPanelFX und entsprechende Eventhandler so angepasst, das nun die komplette
   Ausgabe in der GUI erfolgt. *(MW)*
-- Hauptmenu kann nun die GUI schliesen. *(NW)*
+- Hauptmenu kann nun die GUI schliesen. *(MW)*
+- Haputmenu durch VersionListener und ExitListener die entsprechenden
+  Funktionen hinzugefügt. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012

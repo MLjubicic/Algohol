@@ -7,12 +7,15 @@
  */
 package krypto.gui.menu;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+
 import javafx.stage.Stage;
+
+import krypto.gui.action.menu.ExitListener;
+import krypto.gui.action.menu.LoadListener;
+import krypto.gui.action.menu.VersionListener;
 import krypto.gui.main.Kryptonite;
 
 /**
@@ -22,34 +25,27 @@ import krypto.gui.main.Kryptonite;
 public class MainMenu {
 
 	private MenuBar menuBar;
-	private Stage primaryStage;
+//	private Stage primaryStage;
 	
-	public MainMenu(final Stage primaryStage) {
-		this.primaryStage = primaryStage;
+	public MainMenu(final Stage primaryStage, Kryptonite krypto) {
+//		this.primaryStage = primaryStage;
+		ExitListener exitListener = new ExitListener(primaryStage);
+		VersionListener versionListener = new VersionListener(krypto);
+		LoadListener loadListener = new LoadListener(); 
 		menuBar = new MenuBar();
-		
+
 		Menu fileMenu = new Menu("File");
 		MenuItem loadMItem = new MenuItem("Load");
+		loadMItem.setOnAction(loadListener);
 		MenuItem saveMItem = new MenuItem("Save");
 		MenuItem exitMItem = new MenuItem("Exit");
-		exitMItem.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent arg0) {
-				primaryStage.close();
-			}
-		});
+		exitMItem.setOnAction(exitListener);
 		fileMenu.getItems().addAll(loadMItem, saveMItem, exitMItem);
 		
 		Menu helpMenu = new Menu("Help");
 		MenuItem infoMItem = new MenuItem("Info");
-		infoMItem.setOnAction(new EventHandler<ActionEvent>() {
+		infoMItem.setOnAction(versionListener);
 			
-			@Override
-			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
 		helpMenu.getItems().addAll(infoMItem);
 		
 		menuBar.getMenus().addAll(fileMenu, helpMenu);
