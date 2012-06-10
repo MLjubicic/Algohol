@@ -12,6 +12,8 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
+import krypto.gui.main.Kryptonite;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -20,14 +22,22 @@ import javafx.scene.control.MenuItem;
 public class MainMenu {
 
 	private MenuBar menuBar;
+	private Stage primaryStage;
 	
-	public MainMenu() {
+	public MainMenu(final Stage primaryStage) {
+		this.primaryStage = primaryStage;
 		menuBar = new MenuBar();
 		
 		Menu fileMenu = new Menu("File");
 		MenuItem loadMItem = new MenuItem("Load");
 		MenuItem saveMItem = new MenuItem("Save");
 		MenuItem exitMItem = new MenuItem("Exit");
+		exitMItem.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent arg0) {
+				primaryStage.close();
+			}
+		});
 		fileMenu.getItems().addAll(loadMItem, saveMItem, exitMItem);
 		
 		Menu helpMenu = new Menu("Help");

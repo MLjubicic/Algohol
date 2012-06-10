@@ -171,6 +171,7 @@
 
 - CaesarPanelFX und entsprechende Eventhandler so angepasst, das nun die komplette
   Ausgabe in der GUI erfolgt. *(MW)*
+- Hauptmenu kann nun die GUI schliesen. *(NW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012

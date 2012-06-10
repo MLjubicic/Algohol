@@ -52,7 +52,7 @@ public class Kryptonite extends Application{
 		TreeView<String> tree = new TreeView<String> (new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
-		MenuBar menuBar = new MainMenu().getMenu();
+		MenuBar menuBar = new MainMenu(ps).getMenu();
 		
 		StackPane treePane =  new StackPane();
 		centerPane = new InfoPanelFX().getPanel();
