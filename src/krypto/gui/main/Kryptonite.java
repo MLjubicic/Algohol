@@ -55,8 +55,7 @@ public class Kryptonite extends Application{
 		MenuBar menuBar = new MainMenu().getMenu();
 		
 		StackPane treePane =  new StackPane();
-		StackPane centerPane = new CaesarPanelFX().getPanel();
-//		centerPane = new InfoPanelFX().getPanel();
+		centerPane = new InfoPanelFX().getPanel();
 		treePane.getChildren().add(tree);
 		
 		border.setLeft(treePane);

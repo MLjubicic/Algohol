@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -33,12 +34,14 @@ public class CaesarPanelFX {
 	private StackPane panel;
 	private TextArea plainText = new TextArea();
 	private TextArea cipherText = new TextArea();
+	private TextArea outputArea = new TextArea();
 	private TextField fixField = new TextField();
 	private TextField keyField = new TextField();
+	private Text elapsedTimeText = new Text();
 	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
 	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
 	private CaesarEncryptEvent encryptEvent = new CaesarEncryptEvent(plainText, cipherText, keyField);
-	private CaesarDecryptEvent decryptEvent = new CaesarDecryptEvent(cipherText);
+	private CaesarDecryptEvent decryptEvent = new CaesarDecryptEvent(cipherText, outputArea, elapsedTimeText);
 	
 	public CaesarPanelFX() {
 		panel = new StackPane();
@@ -87,6 +90,12 @@ public class CaesarPanelFX {
 		grid.add(key, 4, 9);
 		
 		grid.add(keyField, 5, 9);
+		
+		// ************** Decrypt output area **************
+		
+		grid.add(outputArea, 1, 14, 2, 5);
+		elapsedTimeText.setFill(Color.RED);
+		grid.add(elapsedTimeText, 1, 20, 2, 1);
 		
 		panel.getChildren().add(grid);
 	}

@@ -165,6 +165,12 @@
 - Enum Alphabet erstellt, in welchen die Häufigkeitsverteilung der Buchstaben
   in deutschen Texten hinterlegt ist. *(MW)*
 - Klasse FrequencyChart implementiert und Funktion überprüft. *(MW)*
+- Test Text File mit Plaintext hinzugefügt. *(MW)*
+
+**10. Juni 2012**
+
+- CaesarPanelFX und entsprechende Eventhandler so angepasst, das nun die komplette
+  Ausgabe in der GUI erfolgt. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
