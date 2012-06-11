@@ -22,7 +22,8 @@ import krypto.gui.javafx.elements.CaesarLeft;
 import krypto.gui.javafx.elements.MainTree;
 import krypto.gui.javafx.panel.CaesarPanelFX;
 import krypto.gui.javafx.panel.InfoPanelFX;
-import krypto.gui.javafx.panel.MainPanelFX;
+import krypto.gui.javafx.panel.ChiffrePanelFX;
+import krypto.gui.javafx.panel.right.CaesarRightFX;
 import krypto.gui.menu.MainMenu;
 
 /**
@@ -36,7 +37,7 @@ public class Kryptonite extends Application{
 	private StackPane bottomPane;
 	private Stage ps;
 	private BorderPane border = new BorderPane();
-	private String activeCenter;
+	private Boolean infoMode;
 
 	/**
 	 * @param args
@@ -59,20 +60,28 @@ public class Kryptonite extends Application{
 
 		StackPane treePane =  new StackPane();
 		centerPane = new InfoPanelFX().getPanel();
-		activeCenter = "Info";
+		infoMode = true;
 		treePane.getChildren().add(tree);
 
 		border.setLeft(treePane);
 		border.setTop(menuBar);
 		border.setCenter(centerPane);
+		border.setRight(new CaesarRightFX().getPanel());
 
 		ps.setScene(new Scene(border));
 		ps.sizeToScene();
 		ps.show();
 	}
 
-	public String getActiveCenter() {
-		return activeCenter;
+	public Boolean getInfoMode() {
+		return infoMode;
+	}
+	
+	public void setBottomPane(StackPane pane) {
+		bottomPane = pane;
+		border.setBottom(bottomPane);
+		ps.sizeToScene();
+		ps.show();
 	}
 	
 	public void setCenterPane(StackPane pane) {
@@ -83,23 +92,16 @@ public class Kryptonite extends Application{
 		ps.show();
 	}
 
+	public void setInfoMode(Boolean infoMode) {
+		this.infoMode = infoMode;
+	}
+	
 	public void setRightPane(StackPane pane) {
 
 		rightPane = pane;
 		border.setRight(rightPane);
 		ps.sizeToScene();
 		ps.show();
-	}
-
-	public void setBottomPane(StackPane pane) {
-		bottomPane = pane;
-		border.setBottom(bottomPane);
-		ps.sizeToScene();
-		ps.show();
-	}
-	
-	public void setActiveCenter (String active) {
-		activeCenter = active;
 	}
 
 }

@@ -5,39 +5,50 @@
  *  +        Gruppe 10: Miro Ljubicic & Mathias Weigert        +
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
-package krypto.gui.javafx.panel;
+package krypto.gui.javafx.panel.right;
 
-import javafx.scene.control.Label;
+import javafx.geometry.Insets;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class InfoPanelFX {
-
+public class CaesarRightFX {
+	
 	private StackPane panel;
-	private String activeCenter;
+	private TextField keyField;
 	
-	public InfoPanelFX() {
+	public CaesarRightFX() {
 		panel = new StackPane();
-		VBox vbox = new VBox();
-		activeCenter = "Info";
+		VBox vBox = new VBox();
+		vBox.setPadding(new Insets(10));
+		vBox.setSpacing(8);
 		
-		Label infoLabel = new Label("Version 1.0");
-		vbox.getChildren().add(infoLabel);
-		panel.getChildren().add(vbox);
+		Text titel = new Text("Key:");
+		keyField = new TextField();
+		
+		vBox.getChildren().add(titel);
+		vBox.getChildren().add(keyField);
+		
+		panel.getChildren().add(vBox);
 	}
-	
+
+	/**
+	 * @return the panel
+	 */
 	public StackPane getPanel() {
 		return panel;
 	}
 
 	/**
-	 * @param activeCenter the activeCenter to set
+	 * @return the keyField
 	 */
-	public void setActiveCenter(String activeCenter) {
-		this.activeCenter = activeCenter;
+	public TextField getKeyField() {
+		return keyField;
 	}
+
 }

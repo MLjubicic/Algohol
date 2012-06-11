@@ -9,17 +9,17 @@ package krypto.gui.javafx.panel;
 
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.action.panel.FixSpacesEvent;
 import krypto.gui.action.panel.NoSpacesEvent;
 
@@ -27,22 +27,22 @@ import krypto.gui.action.panel.NoSpacesEvent;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class MainPanelFX {
+public class ChiffrePanelFX {
 
 	private StackPane panel;
 	private TextArea plainText = new TextArea();
 	private TextArea cipherText = new TextArea();
 	private TextField fixField = new TextField();
-	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
 	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
+	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
+	private Character activeChiffre = new Character('N');
+	private StackPane rightPanel;
+	private StackPane bottomPanel;
+	private EncryptEvent encryptEvent = new EncryptEvent(plainText, cipherText, keyField, activeCenter);
+	private DecryptEvent decryptEvent = new DecryptEvent(cipherText, outputArea, elapsedTimeText);
 	
-	public MainPanelFX(StackPane top, StackPane left, StackPane right, StackPane bottom) {
+	public ChiffrePanelFX() {
 		panel = new StackPane();
-//		BorderPane border = new BorderPane();
-		AnchorPane anchor = new AnchorPane();
-		
-		// ************** Creating CenterPanel with main elements **************
-		StackPane center = new StackPane();
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
 		grid.setVgap(10);
@@ -53,21 +53,25 @@ public class MainPanelFX {
 		plain.setFont(Font.font(null, FontWeight.BOLD, 12));
 		grid.add(plain, 1, 1);
 
-		grid.add(plainText, 1, 2, 10, 5);
+		grid.add(plainText, 1, 2, 2, 5);
+		
+		Button encryptButton = new Button("Encrypt");
+		encryptButton.addEventHandler(ActionEvent.ACTION, encryptEvent);
+		grid.add(encryptButton, 4, 2, 2, 1);
 		
 		ToggleGroup group = new ToggleGroup();
 		
 		RadioButton noSpacesButton = new RadioButton("no spaces");
 		noSpacesButton.addEventHandler(ActionEvent.ACTION, noEvent);
 		noSpacesButton.setToggleGroup(group);
-		grid.add(noSpacesButton, 2, 1, 2, 1);
+		grid.add(noSpacesButton, 4, 3, 2, 1);
 		
 		RadioButton fixButton = new RadioButton("fix");
 		fixButton.addEventHandler(ActionEvent.ACTION, fixEvent);
 		fixButton.setToggleGroup(group);
-		grid.add(fixButton, 4, 1);
+		grid.add(fixButton, 4, 4);
 		
-		grid.add(fixField, 5, 1);
+		grid.add(fixField, 5, 4);
 		
 		// ************** Lower half cipher text area **************
 		Text cipher = new Text("Cipher");
@@ -76,27 +80,51 @@ public class MainPanelFX {
 		
 		grid.add(cipherText, 1, 8, 2, 5);
 		
-		panel.getChildren().add(grid);
+		Button decryptButton = new Button("Decrypt");
+		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
+		grid.add(decryptButton, 4, 8, 2, 1);
 		
-		if (top != null) {
-			anchor.getChildren().add(top);
-			anchor.setTopAnchor(top, 10.0);
-		}
-		if (left != null) {
-			anchor.getChildren().add(left);
-			anchor.setLeftAnchor(left, 3.0);
-		}
-		anchor.getChildren().add(center);
-//		if (top != null) border.getChildren().add(top);
-//		if (left != null) border.getChildren().add(left);
-//		border.getChildren().add(center);
-//		if (right != null) border.getChildren().add(right);
-//		if (bottom != null) border.getChildren().add(bottom);
-//		
-//		panel.getChildren().add(border);
+		panel.getChildren().add(grid);
+	}
+	
+	public Character getActiveChiffre() {
+		return activeChiffre;
+	}
+	
+	/**
+	 * @return the cipherText
+	 */
+	public TextArea getCipherText() {
+		return cipherText;
 	}
 	
 	public StackPane getPanel() {
 		return panel;
 	}
+	
+	/**
+	 * @return the plainText
+	 */
+	public TextArea getPlainText() {
+		return plainText;
+	}
+
+	public void setActiveChiffre(Character activeChiffre) {
+		this.activeChiffre = activeChiffre;
+	}
+	
+	/**
+	 * @param cipherText the cipherText to set
+	 */
+	public void setCipherText(TextArea cipherText) {
+		this.cipherText = cipherText;
+	}
+	
+	/**
+	 * @param plainText the plainText to set
+	 */
+	public void setPlainText(TextArea plainText) {
+		this.plainText = plainText;
+	}
+
 }

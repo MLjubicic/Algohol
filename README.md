@@ -179,6 +179,10 @@
 
 - Kryptonite angepasst um mehr funktionalität und felxibilität in die 
   GUI zu bekommen. *(MW)*
+- MainTreeChangeListener und VersionListener angepasst, das Sie mit neuer
+  GUI Architektur funktionieren. *(MW)*
+- Größere GUI Architektur Änderungen angefangen -> Verlust der Funktion im 
+  Moment *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
