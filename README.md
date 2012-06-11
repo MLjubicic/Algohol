@@ -175,5 +175,10 @@
 - Haputmenu durch VersionListener und ExitListener die entsprechenden
   Funktionen hinzugefügt. *(MW)*
 
+**11. Juni 2012**
+
+- Kryptonite angepasst um mehr funktionalität und felxibilität in die 
+  GUI zu bekommen. *(MW)*
+
 #
 #Präsentation des Projekts 15. Juni 2012

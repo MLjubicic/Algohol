@@ -30,10 +30,13 @@ import krypto.gui.menu.MainMenu;
  * @version 1.0
  */
 public class Kryptonite extends Application{
-	
+
 	private StackPane centerPane;
+	private StackPane rightPane;
+	private StackPane bottomPane;
 	private Stage ps;
 	private BorderPane border = new BorderPane();
+	private String activeCenter;
 
 	/**
 	 * @param args
@@ -47,26 +50,31 @@ public class Kryptonite extends Application{
 	public void start(Stage primaryStage) {
 		ps = primaryStage;
 		ps.setTitle("Kryptonite - Software Project 2");
-//		ps.setFullScreen(true);
-		
+		//		ps.setFullScreen(true);
+
 		TreeView<String> tree = new TreeView<String> (new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
+		tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
 		MenuBar menuBar = new MainMenu(ps, this).getMenu();
-		
+
 		StackPane treePane =  new StackPane();
 		centerPane = new InfoPanelFX().getPanel();
+		activeCenter = "Info";
 		treePane.getChildren().add(tree);
-		
+
 		border.setLeft(treePane);
 		border.setTop(menuBar);
 		border.setCenter(centerPane);
-		
+
 		ps.setScene(new Scene(border));
 		ps.sizeToScene();
 		ps.show();
 	}
 
+	public String getActiveCenter() {
+		return activeCenter;
+	}
+	
 	public void setCenterPane(StackPane pane) {
 
 		centerPane = pane;
@@ -74,5 +82,24 @@ public class Kryptonite extends Application{
 		ps.sizeToScene();
 		ps.show();
 	}
+
+	public void setRightPane(StackPane pane) {
+
+		rightPane = pane;
+		border.setRight(rightPane);
+		ps.sizeToScene();
+		ps.show();
+	}
+
+	public void setBottomPane(StackPane pane) {
+		bottomPane = pane;
+		border.setBottom(bottomPane);
+		ps.sizeToScene();
+		ps.show();
+	}
 	
+	public void setActiveCenter (String active) {
+		activeCenter = active;
+	}
+
 }
