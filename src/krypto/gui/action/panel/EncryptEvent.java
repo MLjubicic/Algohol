@@ -10,7 +10,8 @@ package krypto.gui.action.panel;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.layout.StackPane;
+import krypto.gui.javafx.panel.right.CaesarRightFX;
 import krypto.tools.encrypt.CaesarEncrypt;
 
 /**
@@ -19,24 +20,27 @@ import krypto.tools.encrypt.CaesarEncrypt;
  */
 public class EncryptEvent implements EventHandler<Event>{
 
-	private TextArea plain = new TextArea();
-	private TextArea cipher = new TextArea();
-	private TextField key = new TextField();
-	private String activeCenter;
-
-	public EncryptEvent(TextArea plain, TextArea cipher, TextField key, String activeCenter) {
+	private TextArea plain;
+	private TextArea cipher;
+	private StackPane rightPanel;
+	private Character activePanel;
+	
+	public EncryptEvent(TextArea plain, TextArea cipher, StackPane rightPanel, Character activePanel) {
 		super();
 		this.plain = plain;
 		this.cipher = cipher;
-		this.key = key;
-		this.activeCenter = activeCenter;
+		this.rightPanel = rightPanel;
+		this.activePanel = activePanel;
 	}
 
 	@Override
 	public void handle(Event arg0) {
 		// TODO Auto-generated method stub
-		if (activeCenter.equals("Caesar")) {
-			CaesarEncrypt caesar = new CaesarEncrypt(plain.getText(), key.getText().charAt(0));
+		System.out.println("EncryptEvent: " + activePanel);
+		if (activePanel.equals('C')) {
+			CaesarRightFX caesarRight = (CaesarRightFX) rightPanel;
+			Character key = caesarRight.getKeyField().getText().charAt(0);
+			CaesarEncrypt caesar = new CaesarEncrypt(plain.getText(), key);
 			cipher.setText(caesar.getCipher());
 		}
 	}

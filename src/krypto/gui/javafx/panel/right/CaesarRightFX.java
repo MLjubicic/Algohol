@@ -17,7 +17,7 @@ import javafx.scene.text.Text;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarRightFX {
+public class CaesarRightFX extends StackPane{
 	
 	private StackPane panel;
 	private TextField keyField;

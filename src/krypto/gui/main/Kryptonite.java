@@ -17,12 +17,11 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import krypto.gui.action.menu.MainTreeChangeListener;
-import krypto.gui.javafx.elements.CaesarHeader;
-import krypto.gui.javafx.elements.CaesarLeft;
+import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.javafx.elements.MainTree;
-import krypto.gui.javafx.panel.CaesarPanelFX;
-import krypto.gui.javafx.panel.InfoPanelFX;
 import krypto.gui.javafx.panel.ChiffrePanelFX;
+import krypto.gui.javafx.panel.InfoPanelFX;
+import krypto.gui.javafx.panel.bottom.CaesarBottomFX;
 import krypto.gui.javafx.panel.right.CaesarRightFX;
 import krypto.gui.menu.MainMenu;
 
@@ -66,7 +65,6 @@ public class Kryptonite extends Application{
 		border.setLeft(treePane);
 		border.setTop(menuBar);
 		border.setCenter(centerPane);
-		border.setRight(new CaesarRightFX().getPanel());
 
 		ps.setScene(new Scene(border));
 		ps.sizeToScene();
@@ -75,6 +73,25 @@ public class Kryptonite extends Application{
 
 	public Boolean getInfoMode() {
 		return infoMode;
+	}
+	
+	public void setToCaesarCipher() {
+		ChiffrePanelFX caesarPanel = new ChiffrePanelFX();
+		caesarPanel.setActiveChiffre('C');
+		System.out.println(caesarPanel.getActiveChiffre());
+		caesarPanel.setRightPanel(new CaesarRightFX().getPanel());
+		caesarPanel.setBottomPanel(new CaesarBottomFX().getPanel());
+		caesarPanel.setEncryptEvent(new EncryptEvent(caesarPanel.getPlainText(), caesarPanel.getCipherText(), caesarPanel.getRightPanel(), 'C'));
+
+		infoMode = false;
+		bottomPane = caesarPanel.getBottomPanel();
+		rightPane = caesarPanel.getRightPanel();
+		centerPane = caesarPanel.getPanel();
+		border.setCenter(centerPane);
+		this.setRightPane(rightPane);
+		this.setBottomPane(bottomPane);
+		ps.sizeToScene();
+		ps.show();
 	}
 	
 	public void setBottomPane(StackPane pane) {

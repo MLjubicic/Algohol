@@ -24,8 +24,6 @@ public class MainTree {
 		tree.getChildren().add(monoItem);
 		TreeItem<String> caesarItem = new TreeItem<String> ("Caesar Cipher");
 		monoItem.getChildren().add(caesarItem);
-		TreeItem<String> skytaleItem = new TreeItem<String>	("Skytale Cipher");
-		monoItem.getChildren().add(skytaleItem);
 		TreeItem<String> substItem = new TreeItem<String> ("Substitution Cipher");
 		monoItem.getChildren().add(substItem);
 		TreeItem<String> polyItem = new TreeItem<String> ("Polyalphabetic Ciphers");

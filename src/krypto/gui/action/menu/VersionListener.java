@@ -31,5 +31,6 @@ public class VersionListener implements EventHandler<javafx.event.ActionEvent>{
 		krypto.setCenterPane(new InfoPanelFX().getPanel());
 		krypto.setRightPane(null);
 		krypto.setBottomPane(null);
+		krypto.setInfoMode(true);
 	}
 }

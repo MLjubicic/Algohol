@@ -27,7 +27,7 @@ import krypto.gui.action.panel.NoSpacesEvent;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class ChiffrePanelFX {
+public class ChiffrePanelFX extends StackPane {
 
 	private StackPane panel;
 	private TextArea plainText = new TextArea();
@@ -38,8 +38,8 @@ public class ChiffrePanelFX {
 	private Character activeChiffre = new Character('N');
 	private StackPane rightPanel;
 	private StackPane bottomPanel;
-	private EncryptEvent encryptEvent = new EncryptEvent(plainText, cipherText, keyField, activeCenter);
-	private DecryptEvent decryptEvent = new DecryptEvent(cipherText, outputArea, elapsedTimeText);
+	private EncryptEvent encryptEvent = new EncryptEvent(plainText, cipherText, rightPanel, activeChiffre);
+//	private DecryptEvent decryptEvent = new DecryptEvent(cipherText, outputArea, elapsedTimeText);
 	
 	public ChiffrePanelFX() {
 		panel = new StackPane();
@@ -81,7 +81,7 @@ public class ChiffrePanelFX {
 		grid.add(cipherText, 1, 8, 2, 5);
 		
 		Button decryptButton = new Button("Decrypt");
-		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
+//		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
 		grid.add(decryptButton, 4, 8, 2, 1);
 		
 		panel.getChildren().add(grid);
@@ -91,11 +91,19 @@ public class ChiffrePanelFX {
 		return activeChiffre;
 	}
 	
+	public StackPane getBottomPanel() {
+		return bottomPanel;
+	}
+	
 	/**
 	 * @return the cipherText
 	 */
 	public TextArea getCipherText() {
 		return cipherText;
+	}
+	
+	public StackPane getRightPanel() {
+		return rightPanel;
 	}
 	
 	public StackPane getPanel() {
@@ -113,11 +121,19 @@ public class ChiffrePanelFX {
 		this.activeChiffre = activeChiffre;
 	}
 	
+	public void setBottomPanel(StackPane bottomPanel) {
+		this.bottomPanel = bottomPanel;
+	}
+	
 	/**
 	 * @param cipherText the cipherText to set
 	 */
 	public void setCipherText(TextArea cipherText) {
 		this.cipherText = cipherText;
+	}
+	
+	public void setEncryptEvent(EncryptEvent event) {
+		encryptEvent = event;
 	}
 	
 	/**
@@ -127,4 +143,8 @@ public class ChiffrePanelFX {
 		this.plainText = plainText;
 	}
 
+	public void setRightPanel(StackPane rightPanel) {
+		this.rightPanel = rightPanel;
+	}
+	
 }
