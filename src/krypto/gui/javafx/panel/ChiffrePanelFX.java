@@ -22,6 +22,7 @@ import javafx.scene.text.Text;
 import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.action.panel.FixSpacesEvent;
 import krypto.gui.action.panel.NoSpacesEvent;
+import krypto.gui.javafx.panel.right.BaseRight;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -38,7 +39,7 @@ public class ChiffrePanelFX extends StackPane {
 	private Character activeChiffre = new Character('N');
 	private StackPane rightPanel;
 	private StackPane bottomPanel;
-	private EncryptEvent encryptEvent = new EncryptEvent(plainText, cipherText, rightPanel, activeChiffre);
+	private EncryptEvent encryptEvent;
 //	private DecryptEvent decryptEvent = new DecryptEvent(cipherText, outputArea, elapsedTimeText);
 	
 	public ChiffrePanelFX() {
@@ -47,6 +48,8 @@ public class ChiffrePanelFX extends StackPane {
 		grid.setHgap(10);
 		grid.setVgap(10);
 		grid.setPadding(new Insets(0, 10, 0, 10));
+		
+		encryptEvent = new EncryptEvent(plainText, cipherText, rightPanel, bottomPanel, activeChiffre);
 		
 		// ************** Upper half plain text area **************
 		Text plain = new Text("Plain");
@@ -87,6 +90,56 @@ public class ChiffrePanelFX extends StackPane {
 		panel.getChildren().add(grid);
 	}
 	
+	public ChiffrePanelFX(char c, Object rightP, StackPane bottomP) {
+		panel = new StackPane();
+		GridPane grid = new GridPane();
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(0, 10, 0, 10));
+		
+		rightPanel = ((BaseRight) rightP).getPanel();
+		bottomPanel = bottomP;
+		encryptEvent = new EncryptEvent(plainText, cipherText, rightP, bottomPanel, c);
+		
+		// ************** Upper half plain text area **************
+		Text plain = new Text("Plain");
+		plain.setFont(Font.font(null, FontWeight.BOLD, 12));
+		grid.add(plain, 1, 1);
+
+		grid.add(plainText, 1, 2, 2, 5);
+		
+		Button encryptButton = new Button("Encrypt");
+		encryptButton.addEventHandler(ActionEvent.ACTION, encryptEvent);
+		grid.add(encryptButton, 4, 2, 2, 1);
+		
+		ToggleGroup group = new ToggleGroup();
+		
+		RadioButton noSpacesButton = new RadioButton("no spaces");
+		noSpacesButton.addEventHandler(ActionEvent.ACTION, noEvent);
+		noSpacesButton.setToggleGroup(group);
+		grid.add(noSpacesButton, 4, 3, 2, 1);
+		
+		RadioButton fixButton = new RadioButton("fix");
+		fixButton.addEventHandler(ActionEvent.ACTION, fixEvent);
+		fixButton.setToggleGroup(group);
+		grid.add(fixButton, 4, 4);
+		
+		grid.add(fixField, 5, 4);
+		
+		// ************** Lower half cipher text area **************
+		Text cipher = new Text("Cipher");
+		cipher.setFont(Font.font(null, FontWeight.BOLD, 12));
+		grid.add(cipher, 1, 7);
+		
+		grid.add(cipherText, 1, 8, 2, 5);
+		
+		Button decryptButton = new Button("Decrypt");
+//		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
+		grid.add(decryptButton, 4, 8, 2, 1);
+		
+		panel.getChildren().add(grid);
+	}
+
 	public Character getActiveChiffre() {
 		return activeChiffre;
 	}
@@ -119,6 +172,7 @@ public class ChiffrePanelFX extends StackPane {
 
 	public void setActiveChiffre(Character activeChiffre) {
 		this.activeChiffre = activeChiffre;
+//		encryptEvent.setActivePanel(activeChiffre);
 	}
 	
 	public void setBottomPanel(StackPane bottomPanel) {

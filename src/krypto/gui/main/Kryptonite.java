@@ -76,12 +76,12 @@ public class Kryptonite extends Application{
 	}
 	
 	public void setToCaesarCipher() {
-		ChiffrePanelFX caesarPanel = new ChiffrePanelFX();
-		caesarPanel.setActiveChiffre('C');
-		System.out.println(caesarPanel.getActiveChiffre());
-		caesarPanel.setRightPanel(new CaesarRightFX().getPanel());
-		caesarPanel.setBottomPanel(new CaesarBottomFX().getPanel());
-		caesarPanel.setEncryptEvent(new EncryptEvent(caesarPanel.getPlainText(), caesarPanel.getCipherText(), caesarPanel.getRightPanel(), 'C'));
+		ChiffrePanelFX caesarPanel = new ChiffrePanelFX('C', new CaesarRightFX(), new CaesarBottomFX().getPanel());
+//		caesarPanel.setActiveChiffre('C');
+//		System.out.println(caesarPanel.getActiveChiffre());
+//		caesarPanel.setRightPanel(new CaesarRightFX().getPanel());
+//		caesarPanel.setBottomPanel(new CaesarBottomFX().getPanel());
+//		caesarPanel.setEncryptEvent(new EncryptEvent(caesarPanel.getPlainText(), caesarPanel.getCipherText(), caesarPanel.getRightPanel(), 'C'));
 
 		infoMode = false;
 		bottomPane = caesarPanel.getBottomPanel();

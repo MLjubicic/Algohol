@@ -9,8 +9,8 @@ import javafx.scene.control.TreeItem;
 import krypto.gui.main.Kryptonite;
 
 /**
- * @author Bunny
- *
+ * @author Mathias Weigert & Miro Ljubicic
+ * @version 1.0
  */
 @SuppressWarnings("rawtypes")
 public class MainTreeChangeListener implements ChangeListener{

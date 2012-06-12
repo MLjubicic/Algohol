@@ -22,10 +22,10 @@ public class EncryptEvent implements EventHandler<Event>{
 
 	private TextArea plain;
 	private TextArea cipher;
-	private StackPane rightPanel;
+	private Object rightPanel;
 	private Character activePanel;
 	
-	public EncryptEvent(TextArea plain, TextArea cipher, StackPane rightPanel, Character activePanel) {
+	public EncryptEvent(TextArea plain, TextArea cipher, Object rightPanel, StackPane bottomP, Character activePanel) {
 		super();
 		this.plain = plain;
 		this.cipher = cipher;
@@ -45,4 +45,19 @@ public class EncryptEvent implements EventHandler<Event>{
 		}
 	}
 
+	/**
+	 * @return the activePanel
+	 */
+	public Character getActivePanel() {
+		return activePanel;
+	}
+
+	/**
+	 * @param activePanel the activePanel to set
+	 */
+	public void setActivePanel(Character activePanel) {
+		this.activePanel = activePanel;
+	}
+
+	
 }
