@@ -10,7 +10,6 @@ package krypto.gui.action.panel;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.StackPane;
 import krypto.gui.javafx.panel.right.CaesarRightFX;
 import krypto.tools.encrypt.CaesarEncrypt;
 
@@ -25,7 +24,7 @@ public class EncryptEvent implements EventHandler<Event>{
 	private Object rightPanel;
 	private Character activePanel;
 	
-	public EncryptEvent(TextArea plain, TextArea cipher, Object rightPanel, StackPane bottomP, Character activePanel) {
+	public EncryptEvent(TextArea plain, TextArea cipher, Object rightPanel, Character activePanel) {
 		super();
 		this.plain = plain;
 		this.cipher = cipher;
