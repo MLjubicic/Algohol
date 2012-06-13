@@ -28,6 +28,9 @@ public class MainTreeChangeListener implements ChangeListener{
 		if (str.contains("Caesar")) {
 			krypton.setToCaesarCipher();
 		}
+		if (str.contains("Subs")) {
+			krypton.setToSubstitutionCipher();
+		}
 
 	}
 

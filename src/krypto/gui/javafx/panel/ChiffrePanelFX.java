@@ -23,7 +23,6 @@ import krypto.gui.action.panel.DecryptEvent;
 import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.action.panel.FixSpacesEvent;
 import krypto.gui.action.panel.NoSpacesEvent;
-import krypto.gui.javafx.panel.right.BaseRight;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -34,9 +33,7 @@ public class ChiffrePanelFX extends StackPane {
 	private StackPane panel;
 	private TextArea plainText = new TextArea();
 	private TextArea cipherText = new TextArea();
-	private TextArea outputArea = new TextArea();
 	private TextField fixField = new TextField();
-	private Text elapsedTimeText = new Text();
 	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
 	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
 	private Character activeChiffre = new Character('N');
@@ -101,8 +98,8 @@ public class ChiffrePanelFX extends StackPane {
 		grid.setVgap(10);
 		grid.setPadding(new Insets(0, 10, 0, 10));
 		
-		rightPanel = ((BaseRight) rightP).getPanel();
-		bottomPanel = ((BaseRight) bottomP).getPanel();
+		rightPanel = ((BasePanel) rightP).getPanel();
+		bottomPanel = ((BasePanel) bottomP).getPanel();
 		encryptEvent = new EncryptEvent(plainText, cipherText, rightP, c);
 		decryptEvent = new DecryptEvent(cipherText, bottomP, c);
 		

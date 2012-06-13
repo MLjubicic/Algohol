@@ -192,6 +192,8 @@
 **13. Juni 2012**
 
 - Caesar Cipher komplett implementiert. *(MW)*
+- Rechtes Panel für Substitution Cipher implementiert. *(MW)*
+- Ungenützte "alte" Klassen deleted. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012

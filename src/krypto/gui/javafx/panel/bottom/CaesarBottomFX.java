@@ -12,13 +12,13 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import krypto.gui.javafx.panel.right.BaseRight;
+import krypto.gui.javafx.panel.BasePanel;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarBottomFX extends BaseRight{
+public class CaesarBottomFX extends BasePanel{
 	
 	private TextArea outputArea;
 	private Text timeLabel;

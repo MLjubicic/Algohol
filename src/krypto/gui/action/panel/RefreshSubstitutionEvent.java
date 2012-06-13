@@ -7,34 +7,35 @@
  */
 package krypto.gui.action.panel;
 
+import java.util.Map;
+
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import krypto.tools.encrypt.CaesarEncrypt;
+import krypto.gui.javafx.panel.right.SubstitutionRightFX;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarEncryptEvent implements EventHandler<Event>{
+public class RefreshSubstitutionEvent implements EventHandler<Event>{
 	
-	private TextArea pta = new TextArea();
-	private TextArea cta = new TextArea();
-	private TextField keyTF = new TextField();
-
-	public CaesarEncryptEvent(TextArea pta, TextArea cta, TextField keyTF) {
+	Map<Integer, TextField> cipherField;
+	Map<Integer, TextField> inputField;
+	SubstitutionRightFX panel;
+	
+	public RefreshSubstitutionEvent(Map<Integer, TextField> cipherField, Map<Integer, TextField> inputField, SubstitutionRightFX panel) {
 		super();
-		this.pta = pta;
-		this.cta = cta;
-		this.keyTF = keyTF;
+		this.cipherField = cipherField;
+		this.inputField = inputField;
+		this.panel = panel;
 	}
-	
+
 	@Override
 	public void handle(Event arg0) {
 		// TODO Auto-generated method stub
-		CaesarEncrypt caesar = new CaesarEncrypt(pta.getText(), keyTF.getText().charAt(0));
-		cta.setText(caesar.getCipher());
+		cipherField = inputField;
+		
 	}
-
+	
 }
