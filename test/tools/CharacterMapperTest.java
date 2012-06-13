@@ -15,7 +15,7 @@ import org.junit.Test;
 
 /**
  * A JUnit 4 test for the CharacterMapper class functionality
- * @author miro
+ * @author Miro Ljubicic
  *
  */
 public class CharacterMapperTest {
