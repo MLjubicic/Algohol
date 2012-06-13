@@ -1,13 +1,13 @@
-package krypto.gui.javafx.panel.right;
+package krypto.gui.javafx.panel;
 
 import javafx.scene.layout.StackPane;
 
-public abstract class BaseRight {
+public abstract class BasePanel {
 
 	protected StackPane panel;
 	
 
-	public BaseRight() {
+	public BasePanel() {
 		super();
 		panel = new StackPane();
 	}

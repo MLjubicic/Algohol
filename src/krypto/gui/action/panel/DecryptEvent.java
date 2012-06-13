@@ -12,7 +12,6 @@ import java.util.Map;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 import krypto.gui.javafx.panel.bottom.CaesarBottomFX;
 import krypto.tools.decrypt.CaesarBruteForce;
 
@@ -36,7 +35,6 @@ public class DecryptEvent implements EventHandler<Event>{
 	@Override
 	public void handle(Event arg0) {
 		// TODO Auto-generated method stub
-		System.out.println("Decrypt: " + activePanel);
 		if (activePanel.equals('C')) {
 			CaesarBottomFX caesarBottom = (CaesarBottomFX) bottomPanel;
 			CaesarBruteForce cbf = new CaesarBruteForce(cipher.getText().toUpperCase());

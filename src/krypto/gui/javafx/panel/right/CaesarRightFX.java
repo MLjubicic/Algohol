@@ -11,12 +11,13 @@ import javafx.geometry.Insets;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import krypto.gui.javafx.panel.BasePanel;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarRightFX extends BaseRight{
+public class CaesarRightFX extends BasePanel{
 	
 	private TextField keyField;
 	
