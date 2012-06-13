@@ -19,6 +19,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import krypto.gui.action.panel.DecryptEvent;
 import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.action.panel.FixSpacesEvent;
 import krypto.gui.action.panel.NoSpacesEvent;
@@ -33,14 +34,16 @@ public class ChiffrePanelFX extends StackPane {
 	private StackPane panel;
 	private TextArea plainText = new TextArea();
 	private TextArea cipherText = new TextArea();
+	private TextArea outputArea = new TextArea();
 	private TextField fixField = new TextField();
+	private Text elapsedTimeText = new Text();
 	private FixSpacesEvent fixEvent = new FixSpacesEvent(plainText, fixField);
 	private NoSpacesEvent noEvent = new NoSpacesEvent(plainText);
 	private Character activeChiffre = new Character('N');
 	private StackPane rightPanel;
 	private StackPane bottomPanel;
 	private EncryptEvent encryptEvent;
-//	private DecryptEvent decryptEvent = new DecryptEvent(cipherText, outputArea, elapsedTimeText);
+	private DecryptEvent decryptEvent;
 	
 	public ChiffrePanelFX() {
 		panel = new StackPane();
@@ -49,7 +52,8 @@ public class ChiffrePanelFX extends StackPane {
 		grid.setVgap(10);
 		grid.setPadding(new Insets(0, 10, 0, 10));
 		
-		encryptEvent = new EncryptEvent(plainText, cipherText, rightPanel, bottomPanel, activeChiffre);
+		encryptEvent = new EncryptEvent(plainText, cipherText, rightPanel, activeChiffre);
+		decryptEvent = new DecryptEvent(cipherText, bottomPanel, activeChiffre);
 		
 		// ************** Upper half plain text area **************
 		Text plain = new Text("Plain");
@@ -84,13 +88,13 @@ public class ChiffrePanelFX extends StackPane {
 		grid.add(cipherText, 1, 8, 2, 5);
 		
 		Button decryptButton = new Button("Decrypt");
-//		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
+		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
 		grid.add(decryptButton, 4, 8, 2, 1);
 		
 		panel.getChildren().add(grid);
 	}
 	
-	public ChiffrePanelFX(char c, Object rightP, StackPane bottomP) {
+	public ChiffrePanelFX(char c, Object rightP, Object bottomP) {
 		panel = new StackPane();
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
@@ -98,8 +102,9 @@ public class ChiffrePanelFX extends StackPane {
 		grid.setPadding(new Insets(0, 10, 0, 10));
 		
 		rightPanel = ((BaseRight) rightP).getPanel();
-		bottomPanel = bottomP;
-		encryptEvent = new EncryptEvent(plainText, cipherText, rightP, bottomPanel, c);
+		bottomPanel = ((BaseRight) bottomP).getPanel();
+		encryptEvent = new EncryptEvent(plainText, cipherText, rightP, c);
+		decryptEvent = new DecryptEvent(cipherText, bottomP, c);
 		
 		// ************** Upper half plain text area **************
 		Text plain = new Text("Plain");
@@ -134,7 +139,7 @@ public class ChiffrePanelFX extends StackPane {
 		grid.add(cipherText, 1, 8, 2, 5);
 		
 		Button decryptButton = new Button("Decrypt");
-//		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
+		decryptButton.addEventHandler(ActionEvent.ACTION, decryptEvent);
 		grid.add(decryptButton, 4, 8, 2, 1);
 		
 		panel.getChildren().add(grid);

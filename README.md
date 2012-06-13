@@ -184,5 +184,10 @@
 - Größere GUI Architektur Änderungen angefangen -> Verlust der Funktion im 
   Moment *(MW)*
 
+**12. Juni 2012**
+
+- Allgemein mehrere Klassen angepasst (vor allem EventListener & Panels) damit
+  die neue GUI Architektur wieder funktioniert. *(MW)*
+
 #
 #Präsentation des Projekts 15. Juni 2012
