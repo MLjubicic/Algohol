@@ -9,7 +9,6 @@ package krypto.gui.javafx.panel.bottom;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -26,8 +25,7 @@ public class CaesarBottomFX extends BaseRight{
 	
 	public CaesarBottomFX() {
 		super();
-		outputArea = new TextArea("er");
-		outputArea.setText("klj");
+		outputArea = new TextArea();
 		timeLabel = new Text();
 		this.addChildren();
 //		panel = new StackPane();
@@ -56,6 +54,10 @@ public class CaesarBottomFX extends BaseRight{
 		return outputArea;
 	}
 
+	public Text getTimeLabel() {
+		return timeLabel;
+	}
+
 	@Override
 	public void addChildren() {
 		// TODO Auto-generated method stub
@@ -64,7 +66,7 @@ public class CaesarBottomFX extends BaseRight{
 		vBox.setSpacing(8);
 		
 		Text titel = new Text("Brute Force");
-		outputArea = new TextArea("eerre");
+		outputArea = new TextArea();
 		timeLabel = new Text("Elapsed time: ");
 		timeLabel.setFill(Color.RED);
 		

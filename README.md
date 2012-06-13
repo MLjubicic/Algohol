@@ -189,5 +189,9 @@
 - Allgemein mehrere Klassen angepasst (vor allem EventListener & Panels) damit
   die neue GUI Architektur wieder funktioniert. *(MW)*
 
+**13. Juni 2012**
+
+- Caesar Cipher komplett implementiert. *(MW)*
+
 #
 #Präsentation des Projekts 15. Juni 2012
