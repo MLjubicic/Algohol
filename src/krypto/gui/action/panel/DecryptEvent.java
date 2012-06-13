@@ -48,8 +48,9 @@ public class DecryptEvent implements EventHandler<Event>{
 				outputStr = outputStr + "Key: "+ abc.charAt(i) + " Plain: " + report.get(abc.charAt(i)) + "\n";
 			}
 			System.out.println(outputStr);
-			TextArea outputArea = new TextArea(outputStr);
-			caesarBottom.setOutputArea(outputArea );
+//			TextArea outputArea = new TextArea(outputStr);
+//			caesarBottom.setOutputArea(outputArea );
+			caesarBottom.getOutputArea().setText(outputStr);
 			Text elapsedTime = new Text("Elapsed time: " + cbf.getTime() + " ms.");
 			caesarBottom.setTimeLabel(elapsedTime);
 		}

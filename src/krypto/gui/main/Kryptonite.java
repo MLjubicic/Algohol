@@ -15,9 +15,7 @@ import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
 import krypto.gui.action.menu.MainTreeChangeListener;
-import krypto.gui.action.panel.EncryptEvent;
 import krypto.gui.javafx.elements.MainTree;
 import krypto.gui.javafx.panel.ChiffrePanelFX;
 import krypto.gui.javafx.panel.InfoPanelFX;

@@ -26,7 +26,8 @@ public class CaesarBottomFX extends BaseRight{
 	
 	public CaesarBottomFX() {
 		super();
-		outputArea = new TextArea();
+		outputArea = new TextArea("er");
+		outputArea.setText("klj");
 		timeLabel = new Text();
 		this.addChildren();
 //		panel = new StackPane();
@@ -46,6 +47,14 @@ public class CaesarBottomFX extends BaseRight{
 	public void setTimeLabel(Text timeLabel) {
 		this.timeLabel = timeLabel;
 	}
+	
+
+	/**
+	 * @return the outputArea
+	 */
+	public TextArea getOutputArea() {
+		return outputArea;
+	}
 
 	@Override
 	public void addChildren() {
@@ -55,7 +64,7 @@ public class CaesarBottomFX extends BaseRight{
 		vBox.setSpacing(8);
 		
 		Text titel = new Text("Brute Force");
-		outputArea = new TextArea();
+		outputArea = new TextArea("eerre");
 		timeLabel = new Text("Elapsed time: ");
 		timeLabel.setFill(Color.RED);
 		
