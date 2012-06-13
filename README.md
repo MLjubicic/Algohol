@@ -194,6 +194,7 @@
 - Caesar Cipher komplett implementiert. *(MW)*
 - Rechtes Panel für Substitution Cipher implementiert. *(MW)*
 - Ungenützte "alte" Klassen deleted. *(MW)*
+- Klassen CharacterMapper und CharacterMapperTest erzeugt für die monoalphabetischen Mappings *(ML)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
