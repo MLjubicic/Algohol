@@ -24,26 +24,34 @@ public class FrequencyAnalyzer {
 	private String original;
 
 	/*
-	 * Method calculates the frequency out of an amount map and save the result in
-	 * a new HashMap (frequencyMap).
+	 * Method calculates the frequency out of an amount map and save the result
+	 * in a new HashMap (frequencyMap).
 	 */
-	public void calculateFrequency () {
+	public void calculateFrequency() {
 		frequencyMap = new HashMap<Character, Double>();
+		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for (int i = 0; i < 26; i++) {
+			frequencyMap.put(abc.charAt(i), (double) 0);
+		}
+		
 		Double len = (double) original.length();
+		
 		for (Iterator<Character> iter = amountMap.keySet().iterator(); iter.hasNext();) {
 			Character key = iter.next();
 			double percentage = (double) (amountMap.get(key) / len * 100);
 			frequencyMap.put(key, percentage);
 		}
+		
 	}
 
 	/*
-	 * Method calculates out of a string a HashMap which stores as key the character
-	 * and as value the quantity of this character in the string.
+	 * Method calculates out of a string a HashMap which stores as key the
+	 * character and as value the quantity of this character in the string.
 	 */
-	public void countItems (String str) {
+	public void countItems(String str) {
 		SetSpaces setSpaces = new SetSpaces();
 		str = setSpaces.delete(str);
+		str = str.toUpperCase();
 		original = str;
 		amountMap = new HashMap<Character, Integer>();
 		int length = str.length();
@@ -62,7 +70,7 @@ public class FrequencyAnalyzer {
 	public Map<Character, Integer> getAmountMap() {
 		return amountMap;
 	}
-	
+
 	public Map<Character, Double> getFrequencyMap() {
 		return frequencyMap;
 	}

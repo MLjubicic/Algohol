@@ -200,7 +200,7 @@
 
 - Großes Refactoring der GUI Klassen (mit Augenmerk auf die Eventhandler) *(MW)*
 - Bugfixing bei FrequencyAnalyzer, zählt nun die Spaces nicht mehr mit. *(MW)*
-
+- FrequencyAnalyzer liefert nun eine für die Weiterverarbeitung formatierte MAP. *(MW)*
 
 #
 #Präsentation des Projekts 15. Juni 2012
