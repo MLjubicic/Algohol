@@ -12,8 +12,10 @@ import java.util.Map;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
+import krypto.gui.javafx.charts.FrequencyChart;
 import krypto.gui.javafx.panel.bottom.CaesarBottomFX;
 import krypto.tools.decrypt.CaesarBruteForce;
+import krypto.tools.decrypt.FrequencyAnalyzer;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -47,6 +49,13 @@ public class DecryptEvent implements EventHandler<Event>{
 			}
 			caesarBottom.getOutputArea().setText(outputStr);
 			caesarBottom.getTimeLabel().setText("Elapsed time: " + cbf.getTime() + " ms.");
+		}
+		if (activePanel.equals('S')) {
+			FrequencyAnalyzer fa = new FrequencyAnalyzer();
+			fa.countItems(cipher.getText());
+			fa.calculateFrequency();
+			FrequencyChart chart = new FrequencyChart();
+			chart.
 		}
 	}
 
