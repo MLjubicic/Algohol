@@ -3,7 +3,7 @@
  */
 package tools;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.HashMap;
 
@@ -42,7 +42,7 @@ public class CharacterMapperTest {
 	@Test
 	public void test() {
 		assertNotNull(testmapper);
-		testmapper.getCharacterMapping(originalMap, resultFrequencyAnalysis);
+//		testmapper.getCharacterMapping(originalMap, resultFrequencyAnalysis);
 		
 	}
 		

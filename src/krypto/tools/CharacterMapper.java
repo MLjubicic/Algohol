@@ -4,7 +4,6 @@
 package krypto.tools;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import krypto.data.Alphabet;
 

@@ -8,7 +8,6 @@
 package krypto.gui.action.menu;
 
 import javafx.event.EventHandler;
-
 import krypto.gui.javafx.panel.InfoPanelFX;
 import krypto.gui.main.Kryptonite;
 

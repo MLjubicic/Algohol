@@ -7,71 +7,29 @@
  */
 package krypto.gui.action.panel;
 
-import java.util.Map;
-
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import krypto.gui.javafx.charts.FrequencyChart;
-import krypto.gui.javafx.panel.bottom.CaesarBottomFX;
-import krypto.tools.decrypt.CaesarBruteForce;
-import krypto.tools.decrypt.FrequencyAnalyzer;
+import krypto.gui.javafx.panel.bottom.BottomFX;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class DecryptEvent implements EventHandler<Event>{
+public class DecryptEvent implements EventHandler<Event> {
 
 	private TextArea cipher;
-	private Object bottomPanel;
-	private Character activePanel;
-	
-	public DecryptEvent(TextArea cipher, Object bottomPanel,Character activePanel) {
+	private CipherHandler cipherHandler;
+
+	public DecryptEvent(TextArea cipher, CipherHandler cipherHandler) {
 		super();
 		this.cipher = cipher;
-		this.bottomPanel = bottomPanel;
-		this.activePanel = activePanel;
+		this.cipherHandler = cipherHandler;
 	}
 
 	@Override
 	public void handle(Event arg0) {
-		// TODO Auto-generated method stub
-		if (activePanel.equals('C')) {
-			CaesarBottomFX caesarBottom = (CaesarBottomFX) bottomPanel;
-			CaesarBruteForce cbf = new CaesarBruteForce(cipher.getText().toUpperCase());
-			String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			Map<Character, String> report = cbf.getReport();
-			
-			String outputStr = new String();
-			for (int i = 0; i < 26; i++) {
-				outputStr = outputStr + "Key: "+ abc.charAt(i) + " Plain: " + report.get(abc.charAt(i)) + "\n";
-			}
-			caesarBottom.getOutputArea().setText(outputStr);
-			caesarBottom.getTimeLabel().setText("Elapsed time: " + cbf.getTime() + " ms.");
-		}
-		if (activePanel.equals('S')) {
-			FrequencyAnalyzer fa = new FrequencyAnalyzer();
-			fa.countItems(cipher.getText());
-			fa.calculateFrequency();
-			FrequencyChart chart = new FrequencyChart();
-			chart.
-		}
+		cipherHandler.handleDecryptEvent(cipher.getText());
 	}
 
-	/**
-	 * @return the activePanel
-	 */
-	public Character getActivePanel() {
-		return activePanel;
-	}
-
-	/**
-	 * @param activePanel the activePanel to set
-	 */
-	public void setActivePanel(Character activePanel) {
-		this.activePanel = activePanel;
-	}
-
-	
 }

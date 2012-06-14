@@ -10,52 +10,29 @@ package krypto.gui.action.panel;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import krypto.gui.javafx.panel.right.CaesarRightFX;
-import krypto.tools.encrypt.CaesarEncrypt;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class EncryptEvent implements EventHandler<Event>{
+public class EncryptEvent implements EventHandler<Event> {
 
 	private TextArea plain;
 	private TextArea cipher;
 	private Object rightPanel;
-	private Character activePanel;
-	
-	public EncryptEvent(TextArea plain, TextArea cipher, Object rightPanel, Character activePanel) {
+	private CipherHandler cipherHandler;
+
+	public EncryptEvent(TextArea plain, TextArea cipher, Object rightPanel, CipherHandler cipherHandler) {
 		super();
 		this.plain = plain;
 		this.cipher = cipher;
 		this.rightPanel = rightPanel;
-		this.activePanel = activePanel;
+		this.cipherHandler = cipherHandler;
 	}
 
 	@Override
 	public void handle(Event arg0) {
-		// TODO Auto-generated method stub
-		if (activePanel.equals('C')) {
-			CaesarRightFX caesarRight = (CaesarRightFX) rightPanel;
-			Character key = caesarRight.getKeyField().getText().charAt(0);
-			CaesarEncrypt caesar = new CaesarEncrypt(plain.getText(), key);
-			cipher.setText(caesar.getCipher());
-		}
+		cipher.setText(cipherHandler.handleEncryptEvent(plain.getText()));
 	}
 
-	/**
-	 * @return the activePanel
-	 */
-	public Character getActivePanel() {
-		return activePanel;
-	}
-
-	/**
-	 * @param activePanel the activePanel to set
-	 */
-	public void setActivePanel(Character activePanel) {
-		this.activePanel = activePanel;
-	}
-
-	
 }

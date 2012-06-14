@@ -196,5 +196,9 @@
 - Ungenützte "alte" Klassen deleted. *(MW)*
 - Klassen CharacterMapper und CharacterMapperTest erzeugt für die monoalphabetischen Mappings *(ML)*
 
+**14. Juni 2012**
+
+- Großes Refactoring der GUI Klassen (mit Augenmerk auf die Eventhandler) *(MW)*
+
 #
 #Präsentation des Projekts 15. Juni 2012

@@ -7,11 +7,7 @@
  */
 package krypto.gui.action.menu;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javafx.event.EventHandler;
-
 import krypto.gui.dialog.FileChooser;
 import krypto.io.LoadTextFile;
 

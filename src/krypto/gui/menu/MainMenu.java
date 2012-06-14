@@ -10,9 +10,7 @@ package krypto.gui.menu;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-
 import javafx.stage.Stage;
-
 import krypto.gui.action.menu.ExitListener;
 import krypto.gui.action.menu.LoadListener;
 import krypto.gui.action.menu.VersionListener;

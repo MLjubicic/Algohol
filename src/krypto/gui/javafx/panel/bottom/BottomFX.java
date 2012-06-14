@@ -18,12 +18,12 @@ import krypto.gui.javafx.panel.BasePanel;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarBottomFX extends BasePanel{
+public class BottomFX extends BasePanel{
 	
 	private TextArea outputArea;
 	private Text timeLabel;
 	
-	public CaesarBottomFX() {
+	public BottomFX() {
 		super();
 		outputArea = new TextArea();
 		timeLabel = new Text();
