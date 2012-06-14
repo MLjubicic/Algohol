@@ -199,6 +199,8 @@
 **14. Juni 2012**
 
 - Groﬂes Refactoring der GUI Klassen (mit Augenmerk auf die Eventhandler) *(MW)*
+- Bugfixing bei FrequencyAnalyzer, z‰hlt nun die Spaces nicht mehr mit. *(MW)*
+
 
 #
 #Pr‰sentation des Projekts 15. Juni 2012

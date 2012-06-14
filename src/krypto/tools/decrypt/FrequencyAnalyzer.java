@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import krypto.tools.SetSpaces;
+
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
@@ -40,6 +42,8 @@ public class FrequencyAnalyzer {
 	 * and as value the quantity of this character in the string.
 	 */
 	public void countItems (String str) {
+		SetSpaces setSpaces = new SetSpaces();
+		str = setSpaces.delete(str);
 		original = str;
 		amountMap = new HashMap<Character, Integer>();
 		int length = str.length();
