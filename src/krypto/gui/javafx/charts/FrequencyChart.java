@@ -7,6 +7,8 @@
  */
 package krypto.gui.javafx.charts;
 
+import java.util.Map;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -20,14 +22,19 @@ import krypto.data.Alphabet;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class FrequencyChart extends Application{
+public class FrequencyChart extends Application {
 
-	private String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private String abcd = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private Map<Character, Double> frequencyMap;
+
+	public FrequencyChart(Map<Character, Double> frequencyMap) {
+		this.frequencyMap = frequencyMap;
+	}
 
 	public void start(Stage stage) {
 		NumberAxis yAxis = new NumberAxis();
 		CategoryAxis xAxis = new CategoryAxis();
-		BarChart<String, Number> bc = new BarChart<String, Number>(xAxis,yAxis);
+		BarChart<String, Number> bc = new BarChart<String, Number>(xAxis, yAxis);
 
 		stage.setTitle("Kryptonite -> Frequency Analysis");
 		bc.setTitle("Frequency Analysis");
@@ -42,31 +49,21 @@ public class FrequencyChart extends Application{
 
 		XYChart.Series<String, Number> cipherSeries = new XYChart.Series<String, Number>();
 		cipherSeries.setName("Cipher");
-		for (Alphabet def : Alphabet.values()) {
-			cipherSeries.getData().add(new XYChart.Data<String, Number>(def.name(), def.getFrequency()));
+
+		for (int i = 0; i < 26; i++) {
+			String str = String.valueOf(abcd.charAt(i));
+			Double number = frequencyMap.get(abcd.charAt(i));
+			cipherSeries.getData().add(new XYChart.Data<String, Number>(str, number));
 		}
-		
-		Scene scene = new Scene(bc,800,600);
+
+		Scene scene = new Scene(bc, 800, 600);
 		bc.getData().addAll(plainSeries, cipherSeries);
 		stage.setScene(scene);
 		stage.show();
-		
-//		Label caption = new Label(" ");
-//		caption.setTextFill(Color.RED);
-//		caption.setStyle("-fx-font: 24 arial;");
-//		for (Series<String, Number> data : bc.getData()) {
-//			data.getNode().addEventHandler(MouseEvent.CLICK, new EventHandler<MouseEvent>() {
-//
-//				@Override
-//				public void handle(MouseEvent e) {
-//					// TODO Auto-generated method stub
-//					caption.setTranslateX(e.getS)
-//				}
-//			});
-//		}
+
 	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}
 }
-

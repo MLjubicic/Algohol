@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.HashMap;
 
-import krypto.tools.CharacterMapper;
+import krypto.tools.MapSort;
 
 import org.junit.After;
 import org.junit.Before;
@@ -20,7 +20,7 @@ import org.junit.Test;
  */
 public class CharacterMapperTest {
 
-	CharacterMapper testmapper;
+	MapSort testmapper;
 	HashMap<Character, Double> originalMap;
 	HashMap<Character, Double> resultFrequencyAnalysis;
 	
@@ -29,7 +29,7 @@ public class CharacterMapperTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		testmapper = new CharacterMapper();
+		testmapper = new MapSort();
 	}
 
 	/**

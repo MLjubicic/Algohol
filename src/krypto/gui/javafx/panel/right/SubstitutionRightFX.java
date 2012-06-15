@@ -39,6 +39,20 @@ public class SubstitutionRightFX extends BasePanel{
 	}
 
 	/**
+	 * @return the cipherCharacterField
+	 */
+	public Map<Integer, TextField> getCipherCharacterField() {
+		return cipherCharacterField;
+	}
+
+	/**
+	 * @param cipherCharacterField the cipherCharacterField to set
+	 */
+	public void setCipherCharacterField(Map<Integer, TextField> cipherCharacterField) {
+		this.cipherCharacterField = cipherCharacterField;
+	}
+
+	/**
 	 * @return the panel
 	 */
 	public StackPane getPanel() {
