@@ -7,10 +7,13 @@
  */
 package krypto.tools.decrypt;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
+import krypto.tools.FrequencyBean;
 import krypto.tools.SetSpaces;
 
 /**
@@ -21,6 +24,7 @@ public class FrequencyAnalyzer {
 
 	private Map<Character, Integer> amountMap;
 	private Map<Character, Double> frequencyMap;
+	private List<FrequencyBean> frequencyList;
 	private String original;
 
 	/*
@@ -29,6 +33,7 @@ public class FrequencyAnalyzer {
 	 */
 	public void calculateFrequency() {
 		frequencyMap = new HashMap<Character, Double>();
+		frequencyList = new ArrayList<FrequencyBean>();
 		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		for (int i = 0; i < 26; i++) {
 			frequencyMap.put(abc.charAt(i), (double) 0);
@@ -40,6 +45,7 @@ public class FrequencyAnalyzer {
 			Character key = iter.next();
 			double percentage = (double) (amountMap.get(key) / len * 100);
 			frequencyMap.put(key, percentage);
+			frequencyList.add(new FrequencyBean(key, percentage));
 		}
 		
 	}
@@ -74,4 +80,19 @@ public class FrequencyAnalyzer {
 	public Map<Character, Double> getFrequencyMap() {
 		return frequencyMap;
 	}
+
+	/**
+	 * @return the frequencyList
+	 */
+	public List<FrequencyBean> getFrequencyList() {
+		return frequencyList;
+	}
+
+	/**
+	 * @param frequencyList the frequencyList to set
+	 */
+	public void setFrequencyList(List<FrequencyBean> frequencyList) {
+		this.frequencyList = frequencyList;
+	}
+	
 }

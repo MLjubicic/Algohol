@@ -17,19 +17,22 @@ import krypto.gui.action.menu.VersionListener;
 import krypto.gui.main.Kryptonite;
 
 /**
+ * Liefert das Hauptmenu der Applikation mit dem File- und Hilfemenu.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
 public class MainMenu {
 
 	private MenuBar menuBar;
-//	private Stage primaryStage;
-	
+
+	// private Stage primaryStage;
+
 	public MainMenu(final Stage primaryStage, Kryptonite krypto) {
-//		this.primaryStage = primaryStage;
+		// this.primaryStage = primaryStage;
 		ExitListener exitListener = new ExitListener(primaryStage);
 		VersionListener versionListener = new VersionListener(krypto);
-		LoadListener loadListener = new LoadListener(); 
+		LoadListener loadListener = new LoadListener(krypto);
 		menuBar = new MenuBar();
 
 		Menu fileMenu = new Menu("File");
@@ -39,16 +42,16 @@ public class MainMenu {
 		MenuItem exitMItem = new MenuItem("Exit");
 		exitMItem.setOnAction(exitListener);
 		fileMenu.getItems().addAll(loadMItem, saveMItem, exitMItem);
-		
+
 		Menu helpMenu = new Menu("Help");
 		MenuItem infoMItem = new MenuItem("Info");
 		infoMItem.setOnAction(versionListener);
-			
+
 		helpMenu.getItems().addAll(infoMItem);
-		
+
 		menuBar.getMenus().addAll(fileMenu, helpMenu);
 	}
-	
+
 	public MenuBar getMenu() {
 		return menuBar;
 	}

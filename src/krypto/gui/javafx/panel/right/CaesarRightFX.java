@@ -14,19 +14,20 @@ import javafx.scene.text.Text;
 import krypto.gui.javafx.panel.BasePanel;
 
 /**
+ * Generiert die Eingabemaske für die benötigten Figures zum Caesar Cipher.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class CaesarRightFX extends BasePanel{
-	
+public class CaesarRightFX extends BasePanel {
+
 	private TextField keyField;
-	
+
 	public CaesarRightFX() {
 		super();
 		keyField = new TextField();
 		this.addChildren();
 	}
-
 
 	/**
 	 * @return the keyField
@@ -35,14 +36,13 @@ public class CaesarRightFX extends BasePanel{
 		return keyField;
 	}
 
-
 	@Override
 	public void addChildren() {
 		VBox vBox = new VBox();
 
 		vBox.setPadding(new Insets(10));
 		vBox.setSpacing(8);
-		
+
 		Text titel = new Text("Key:");
 		vBox.getChildren().add(titel);
 		vBox.getChildren().add(keyField);

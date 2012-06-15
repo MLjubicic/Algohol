@@ -7,6 +7,7 @@
  */
 package krypto.tools;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -40,6 +41,7 @@ public class MapSort {
 				}
 			}
 			AbcElement element = new AbcElement(highestKey, highestValue);
+			frequencySortedMap = new HashMap<Integer, AbcElement>();
 			frequencySortedMap.put(25 - i, element);
 			inputMap.remove(highestKey);
 		}

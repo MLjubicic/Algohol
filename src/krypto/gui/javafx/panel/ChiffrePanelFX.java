@@ -22,6 +22,7 @@ import javafx.scene.text.Text;
 import krypto.gui.action.panel.CipherHandler;
 import krypto.gui.action.panel.DecryptEvent;
 import krypto.gui.action.panel.EncryptEvent;
+import krypto.gui.action.panel.EncryptEventSubstitution;
 import krypto.gui.action.panel.FixSpacesEvent;
 import krypto.gui.action.panel.NoSpacesEvent;
 
@@ -40,6 +41,15 @@ public class ChiffrePanelFX extends StackPane {
 	private EncryptEvent encryptEvent;
 	private DecryptEvent decryptEvent;
 
+	/**
+	 * Generiert das Hauptpanel in welchem sowohl der Klartext, als auch der
+	 * Cipher Text dargestellt und verändert werden können. Von hier aus startet
+	 * der User auch die Ver- und Entschluesselung
+	 * 
+	 * @param c
+	 * @param rightP
+	 * @param bottomP
+	 */
 	public ChiffrePanelFX(CipherHandler c, Object rightP, Object bottomP) {
 		panel = new StackPane();
 		GridPane grid = new GridPane();

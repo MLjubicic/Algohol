@@ -21,14 +21,17 @@ public class FixSpacesEvent implements EventHandler<Event> {
 
 	private TextArea fx;
 	private TextField tf;
-	
+
 	public FixSpacesEvent(TextArea fx, TextField tf) {
 		super();
 		this.fx = fx;
 		this.tf = tf;
 	}
-	
+
 	@Override
+	/**
+	 * Steuert die automatische Verteilung von Leerzeichen a Block.
+	 */
 	public void handle(Event arg0) {
 		// TODO Auto-generated method stub
 		int n = Integer.valueOf(tf.getText());

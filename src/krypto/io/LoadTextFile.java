@@ -16,14 +16,17 @@ import java.io.IOException;
 import krypto.gui.dialog.ExceptionDisplay;
 
 /**
+ * Klasse lädt Textfile in einen String, welcher von der Applikation weiter
+ * verarbeitet wird.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
 public class LoadTextFile {
 
 	String str = new String();
-	
-	public void loadFile (File file) {
+
+	public void loadFile(File file) {
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(file));
@@ -33,7 +36,7 @@ public class LoadTextFile {
 			e1.printStackTrace();
 		}
 		try {
-			while(reader.read()!= -1) {
+			while (reader.read() != -1) {
 				str = str + reader.readLine();
 			}
 		} catch (IOException e) {
@@ -42,7 +45,7 @@ public class LoadTextFile {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String getStr() {
 		return str;
 	}

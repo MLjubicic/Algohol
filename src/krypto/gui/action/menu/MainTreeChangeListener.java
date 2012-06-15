@@ -29,6 +29,9 @@ public class MainTreeChangeListener implements ChangeListener {
 	}
 
 	@Override
+	/**
+	 * Listener welcher die Usereingabe mittels des Auswahltrees verarbeitet.
+	 */
 	public void changed(ObservableValue observable, Object oldValue, Object newValue) {
 		TreeItem treeItem = (TreeItem) newValue;
 		String str = treeItem.toString();

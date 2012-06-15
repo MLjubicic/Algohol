@@ -202,5 +202,8 @@
 - Bugfixing bei FrequencyAnalyzer, zählt nun die Spaces nicht mehr mit. *(MW)*
 - FrequencyAnalyzer liefert nun eine für die Weiterverarbeitung formatierte MAP. *(MW)*
 
+**3 Stunden vor Abgabe**
+Hier keine Updates mehr nur noch der verzweifelte Versuch zu retten was zu retten ist.
+
 #
 #Präsentation des Projekts 15. Juni 2012

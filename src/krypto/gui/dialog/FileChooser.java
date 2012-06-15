@@ -22,16 +22,15 @@ public class FileChooser {
 	private File file;
 
 	/**
-	 *  Method which opens a file chooser. 
-	 *  NEED: We should write a file filter for this method.
-	 *        Which shows only txt files.
+	 * Method which opens a file chooser. NEED: We should write a file filter
+	 * for this method. Which shows only txt files.
 	 */
 	public void setTextFile() {
-		JFileChooser fc =  new JFileChooser();
+		JFileChooser fc = new JFileChooser();
 		fc.setDialogTitle("Software Projekt 2 - Kryptologie");
 		fc.setApproveButtonText("Choose Textfile");
-//		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-//		fc.setFileFilter(new FileNameExtensionFilter("Path", ".*"));
+		// fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		// fc.setFileFilter(new FileNameExtensionFilter("Path", ".*"));
 
 		int returnVal = fc.showOpenDialog(new JFrame());
 
@@ -42,6 +41,7 @@ public class FileChooser {
 
 	/**
 	 * Method which returns the selected file
+	 * 
 	 * @return file
 	 */
 	public File getFile() {

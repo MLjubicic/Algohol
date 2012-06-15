@@ -28,6 +28,8 @@ import krypto.gui.javafx.panel.right.SubstitutionRightFX;
 import krypto.gui.menu.MainMenu;
 
 /**
+ * Hauptklasse dient zum starten der Applikation.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
@@ -57,10 +59,11 @@ public class Kryptonite extends Application {
 		TreeView<String> tree = new TreeView<String>(new MainTree().getTree());
 		tree.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 		tree.getSelectionModel().selectedItemProperty().addListener(new MainTreeChangeListener(this));
+		centerPane = new InfoPanelFX().getPanel();
+
 		MenuBar menuBar = new MainMenu(ps, this).getMenu();
 
 		StackPane treePane = new StackPane();
-		centerPane = new InfoPanelFX().getPanel();
 		infoMode = true;
 		treePane.getChildren().add(tree);
 
@@ -77,6 +80,13 @@ public class Kryptonite extends Application {
 		return infoMode;
 	}
 
+	/**
+	 * Setzt die Panels, je nach ausgewählter Verschlüsselungstechnik.
+	 * 
+	 * @param ciffrePanel
+	 * @param rightPanel
+	 * @param bottomPanel
+	 */
 	public void setCipherPanels(ChiffrePanelFX ciffrePanel, BasePanel rightPanel, BasePanel bottomPanel) {
 
 		infoMode = false;
@@ -101,6 +111,13 @@ public class Kryptonite extends Application {
 		border.setCenter(centerPane);
 		ps.sizeToScene();
 		ps.show();
+	}
+
+	/**
+	 * @return the centerPane
+	 */
+	public StackPane getCenterPane() {
+		return centerPane;
 	}
 
 	public void setInfoMode(Boolean infoMode) {

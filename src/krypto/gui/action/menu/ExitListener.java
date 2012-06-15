@@ -15,15 +15,17 @@ import javafx.stage.Stage;
  * @version 1.0
  */
 public class ExitListener implements EventHandler<javafx.event.ActionEvent> {
-	
+
 	private Stage primaryStage;
-	
+
 	public ExitListener(Stage primaryStage) {
 		super();
 		this.primaryStage = primaryStage;
 	}
 
-	@Override
+	/**
+	 * Listener für das Hauptmenu -> schliesst die Anwendung.
+	 */
 	public void handle(javafx.event.ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		primaryStage.close();

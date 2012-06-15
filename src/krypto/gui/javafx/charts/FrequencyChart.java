@@ -31,6 +31,10 @@ public class FrequencyChart extends Application {
 		this.frequencyMap = frequencyMap;
 	}
 
+	/**
+	 * Zeigt Normalverteilung der Buchstaben im Vergleich zur errechneten
+	 * Verteilung im verschlüsselten Text als Balken Diagramm an.
+	 */
 	public void start(Stage stage) {
 		NumberAxis yAxis = new NumberAxis();
 		CategoryAxis xAxis = new CategoryAxis();
@@ -41,7 +45,7 @@ public class FrequencyChart extends Application {
 		yAxis.setLabel("Percentage");
 		xAxis.setLabel("Alphabet");
 
-		XYChart.Series plainSeries = new XYChart.Series<String, Number>();
+		XYChart.Series<String, Number> plainSeries = new XYChart.Series<String, Number>();
 		plainSeries.setName("Plain");
 		for (Alphabet abc : Alphabet.values()) {
 			plainSeries.getData().add(new XYChart.Data<String, Number>(abc.name(), abc.getFrequency()));

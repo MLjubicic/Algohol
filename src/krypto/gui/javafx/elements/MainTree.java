@@ -16,24 +16,28 @@ import javafx.scene.control.TreeItem;
 public class MainTree {
 
 	private TreeItem<String> tree;
-	
+
+	/**
+	 * Generiert das Tree Auswahlmenü in welchem der User die Art der
+	 * Verschlüßelung auswählen kann.
+	 */
 	public MainTree() {
-		tree = new TreeItem<String> ("Kryptonite");
+		tree = new TreeItem<String>("Kryptonite");
 		tree.setExpanded(true);
-		TreeItem<String> monoItem = new TreeItem<String> ("Monoalphabetic Ciphers");
+		TreeItem<String> monoItem = new TreeItem<String>("Monoalphabetic Ciphers");
 		tree.getChildren().add(monoItem);
-		TreeItem<String> caesarItem = new TreeItem<String> ("Caesar Cipher");
+		TreeItem<String> caesarItem = new TreeItem<String>("Caesar Cipher");
 		monoItem.getChildren().add(caesarItem);
-		TreeItem<String> substItem = new TreeItem<String> ("Substitution Cipher");
+		TreeItem<String> substItem = new TreeItem<String>("Substitution Cipher");
 		monoItem.getChildren().add(substItem);
-		TreeItem<String> polyItem = new TreeItem<String> ("Polyalphabetic Ciphers");
+		TreeItem<String> polyItem = new TreeItem<String>("Polyalphabetic Ciphers");
 		tree.getChildren().add(polyItem);
-		TreeItem<String> vigenereItem = new TreeItem<String> ("Vigenère Cipher");
+		TreeItem<String> vigenereItem = new TreeItem<String>("Vigenère Cipher");
 		polyItem.getChildren().add(vigenereItem);
 	}
-	
+
 	public TreeItem<String> getTree() {
 		return tree;
 	}
-	
+
 }

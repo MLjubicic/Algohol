@@ -10,7 +10,6 @@ package krypto.gui.action.panel;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
-import krypto.gui.javafx.panel.bottom.BottomFX;
 
 /**
  * @author Mathias Weigert & Miro Ljubicic
@@ -28,6 +27,9 @@ public class DecryptEvent implements EventHandler<Event> {
 	}
 
 	@Override
+	/**
+	 * Behandelt die Actionen für den Decrypt Button im ChiffrePanelFX
+	 */
 	public void handle(Event arg0) {
 		cipherHandler.handleDecryptEvent(cipher.getText());
 	}

@@ -6,6 +6,7 @@
  *  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
 package krypto.gui.dialog;
+
 /**
  * 
  */
@@ -21,10 +22,16 @@ public class ExceptionDisplay {
 
 	/**
 	 * Method which displays a error message
+	 * 
 	 * @param msg
 	 */
-	public ExceptionDisplay (String msg) {
-		JOptionPane.showMessageDialog(new JFrame(), msg, "Kryptologie", JOptionPane.ERROR_MESSAGE);  
+	/**
+	 * Gibt msg (String) als Fehlermeldung/Information für den Benutzer aus.
+	 * 
+	 * @param msg
+	 */
+	public ExceptionDisplay(String msg) {
+		JOptionPane.showMessageDialog(new JFrame(), msg, "Kryptologie", JOptionPane.ERROR_MESSAGE);
 	}
 
 }

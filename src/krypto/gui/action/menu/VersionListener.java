@@ -15,16 +15,19 @@ import krypto.gui.main.Kryptonite;
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class VersionListener implements EventHandler<javafx.event.ActionEvent>{
+public class VersionListener implements EventHandler<javafx.event.ActionEvent> {
 
 	private Kryptonite krypto;
-	
+
 	public VersionListener(Kryptonite krypto) {
 		super();
 		this.krypto = krypto;
 	}
 
 	@Override
+	/**
+	 * Listener welcher im Hauptmenu die Anzeige der Details ausführt.
+	 */
 	public void handle(javafx.event.ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		krypto.setCenterPane(new InfoPanelFX().getPanel());

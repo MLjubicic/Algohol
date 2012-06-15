@@ -8,6 +8,9 @@
 package krypto.tools;
 
 /**
+ * Klasse welche die nach Vorkommen sortierte Buchstaben und ihre
+ * Auftritwahrscheinlichkeit abbilden.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */

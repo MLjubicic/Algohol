@@ -10,24 +10,46 @@ package krypto.gui.javafx.panel.right;
 import java.util.HashMap;
 import java.util.Map;
 
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import krypto.gui.action.panel.RefreshEvent;
 import krypto.gui.javafx.panel.BasePanel;
 
 /**
+ * Generiert, das Eingabe Panel für die für das Substitution Cipher notwendigen
+ * Daten.
+ * 
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
  */
-public class SubstitutionRightFX extends BasePanel{
+public class SubstitutionRightFX extends BasePanel {
 
 	private StackPane panel = new StackPane();
-	private Map <Integer, Text> abcText;
-	private Map <Integer, TextField> cipherCharacterField;
-	private Map <Integer, TextField> inputMap;
+	private Map<Integer, Text> abcText;
+	private Map<Integer, TextField> cipherCharacterField;
+	private Map<Integer, TextField> inputMap;
+	private RefreshEvent refreshHandler;
+	private Button refreshButton;
+
+	/**
+	 * @return the inputMap
+	 */
+	public Map<Integer, TextField> getInputMap() {
+		return inputMap;
+	}
+
+	/**
+	 * @param inputMap
+	 *            the inputMap to set
+	 */
+	public void setInputMap(Map<Integer, TextField> inputMap) {
+		this.inputMap = inputMap;
+	}
 
 	public SubstitutionRightFX() {
 		super();
@@ -35,6 +57,7 @@ public class SubstitutionRightFX extends BasePanel{
 		abcText = new HashMap<Integer, Text>();
 		cipherCharacterField = new HashMap<Integer, TextField>();
 		inputMap = new HashMap<Integer, TextField>();
+		refreshHandler = new RefreshEvent(this);
 		this.addChildren();
 	}
 
@@ -46,7 +69,8 @@ public class SubstitutionRightFX extends BasePanel{
 	}
 
 	/**
-	 * @param cipherCharacterField the cipherCharacterField to set
+	 * @param cipherCharacterField
+	 *            the cipherCharacterField to set
 	 */
 	public void setCipherCharacterField(Map<Integer, TextField> cipherCharacterField) {
 		this.cipherCharacterField = cipherCharacterField;
@@ -60,7 +84,8 @@ public class SubstitutionRightFX extends BasePanel{
 	}
 
 	/**
-	 * @param panel the panel to set
+	 * @param panel
+	 *            the panel to set
 	 */
 	public void setPanel(StackPane panel) {
 		this.panel = panel;
@@ -68,7 +93,6 @@ public class SubstitutionRightFX extends BasePanel{
 
 	@Override
 	public void addChildren() {
-		// TODO Auto-generated method stub
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
 		grid.setVgap(10);
@@ -123,7 +147,8 @@ public class SubstitutionRightFX extends BasePanel{
 			grid.add(field, xPos, yPos);
 			yPos++;
 		}
-		Button refreshButton = new Button("Refresh");
+		refreshButton = new Button("Refresh");
+		refreshButton.addEventHandler(ActionEvent.ACTION, refreshHandler);
 		grid.add(refreshButton, 5, 0);
 		panel.getChildren().add(grid);
 	}

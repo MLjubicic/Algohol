@@ -1,0 +1,15 @@
+krypto.data
+krypto.gui.action.menu
+krypto.gui.action.panel
+krypto.gui.dialog
+krypto.gui.javafx.charts
+krypto.gui.javafx.elements
+krypto.gui.javafx.panel
+krypto.gui.javafx.panel.bottom
+krypto.gui.javafx.panel.right
+krypto.gui.main
+krypto.gui.menu
+krypto.io
+krypto.tools
+krypto.tools.decrypt
+krypto.tools.encrypt

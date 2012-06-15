@@ -7,7 +7,6 @@
  */
 package krypto.tools.encrypt;
 
-
 /**
  * @author Mathias Weigert & Miro Ljubicic
  * @version 1.0
@@ -28,14 +27,8 @@ public class CaesarEncrypt {
 			Character z = this.plain.charAt(i);
 			if (z != ' ') {
 				Integer x = abc.indexOf(z) + k;
-				z = abc.charAt(x%26);
+				z = abc.charAt(x % 26);
 				cipher = cipher + z;
-//			int pos = abc.indexOf(this.plain.charAt(i)) + dis;
-//			if (pos > 25) {
-//				pos = pos -26;
-//			}
-//			Character c = abc.charAt(pos);
-//			cipher = cipher + Character.toUpperCase(c);
 			} else {
 				cipher = cipher + ' ';
 			}
